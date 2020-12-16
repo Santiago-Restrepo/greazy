@@ -1,8 +1,59 @@
+mixin producto(imgUrl, nombre, precio)
+    .product
+        img(src=""+imgUrl, alt="").product__image
+        span.product__name #{nombre}
+        span.product__price #{precio}
+
+
 <!DOCTYPE html>
-html(lang="en")
+html(lang="es")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="css/estilos.css")
-        title Document
+        title Greazy
     body
+        header.header
+            span.header__title Greazy
+        main.main
+            .main__image
+                h1.main__image-title Greazy
+                button Contáctanos
+        section.catalog
+            .catalog__carousel
+                //Aquí van los productos
+        section.about__greazy
+            .about__greazy-info
+                h2.about__greazy-info__title ANYTIME IS A GOOD TIME
+                p.about__greazy-info__descripton En Greazy rompemos con todo aquello que nos diga como y cuando vestirnos , buscando expresar frescura y crudeza en nuestros diseños y movimientos, demostrando asi que cualquiera puede pertenecer a Greazy Gang.
+            .about__greazy-image
+                img(src="", alt="")
+        section.gallery
+            img(src="", alt="")
+            img(src="", alt="")
+            img(src="", alt="")
+            img(src="", alt="")
+            img(src="", alt="")
+            img(src="", alt="")
+            img(src="", alt="")
+            img(src="", alt="")
+            img(src="", alt="")
+        section.contact
+            .contact__box
+                .contact__media
+                    span.contact__media-image
+                        img(src="", alt="")
+                    span.contact__media-text
+                .contact__media
+                    span.contact__media-image
+                        img(src="", alt="")
+                    span.contact__media-text
+        footer.footer
+            .social__media
+                span
+                    img(src="", alt="")
+            span.rights ©2020 by Greazy
+
+
+
+        
