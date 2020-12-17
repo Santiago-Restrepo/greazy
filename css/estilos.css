@@ -3,6 +3,7 @@
 @import url("//db.onlinewebfonts.com/c/67137b5f6928edc941186baaab5a664b?family=Lemon/Milk");
 /*Colores*/
 /*Fuentes*/
+@import url("https://fonts.googleapis.com/css2?family=Rowdies&display=swap");
 /*Tamaños*/
 /*general*/
 * {
@@ -15,7 +16,7 @@ h1 {
   font-family: "Lemon/Milk", "sans-serif";
 }
 
-button {
+button, span, p {
   font-family: "Montserrat", "sans-serif";
 }
 
@@ -69,31 +70,130 @@ button {
   font-weight: 600;
 }
 
+/*Carousel mobile*/
+.catalog {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: #ffffff;
+}
+.catalog__carousel-mobile {
+  overflow-x: hidden;
+  width: 100%;
+}
+.catalog__carousel-mobile .carousel__mobile {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+}
+.catalog__carousel-mobile .carousel__mobile .product {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0 2em;
+  background-color: transparent;
+}
+.catalog__carousel-mobile .carousel__mobile .product__image {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+.catalog__carousel-mobile .carousel__mobile .product__image img {
+  width: 100%;
+}
+.catalog__carousel-mobile .carousel__mobile .product__image .contact {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2em 0;
+  width: 100%;
+  height: 2em;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.catalog__carousel-mobile .carousel__mobile .product__image .contact a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #ffffff;
+}
+.catalog__carousel-mobile .carousel__mobile .product__image .contact a i {
+  font-size: 2em;
+  color: #ffffff;
+}
+.catalog__carousel-mobile .carousel__mobile .product span {
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+
 /* Sección 1 - Imágen + Texto */
 .about__greazy {
   width: 100%;
+  position: relative;
+  margin: 100px auto 100px auto;
+}
+.about__greazy-image {
+  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
 }
 .about__greazy-image img {
-  width: 90%;
-  margin: 10px auto;
+  width: 55%;
+  margin: 100px auto 0px auto;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  object-fit: cover;
+}
+.about__greazy-image img:nth-child(1) {
+  z-index: 4;
+}
+.about__greazy-image img:nth-child(2) {
+  opacity: 0.5;
+  margin-left: -150px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  z-index: 3;
+}
+.about__greazy-image img:nth-child(3) {
+  opacity: 0.3;
+  margin-left: -180px;
+  margin-top: -25px;
+  margin-bottom: 60px;
+  z-index: 2;
+}
+.about__greazy-image img:nth-child(4) {
+  opacity: 0.3;
+  margin-left: -180px;
+  margin-top: -60px;
+  margin-bottom: 80px;
+  z-index: 0.1;
+  display: none;
 }
 .about__greazy-info {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: black;
   width: 90%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 10px;
+  padding: 20px 0px 0px 0px;
+  margin: 20px auto 0px auto;
 }
 .about__greazy-info__title {
+  color: #ec5248;
   font-family: "Lemon/Milk", "sans-serif";
-  color: #23272a;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .about__greazy-info__descripton {
   font-family: "Montserrat", "sans-serif";
-  padding: 15px 0px 10px 0px;
+  text-align: center;
 }
 
 /* Galeria de 9 Fotos */
@@ -124,26 +224,35 @@ section.gallery img {
   padding: 15px 0px;
   color: #f5df4d;
 }
+.contact .contact__box h2 {
+  color: #f2f3cb;
+}
 .contact .contact__box img {
   width: 100%;
+  object-fit: cover;
+  background-position-y: 100%;
 }
 .contact .contact__box__redes {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 40px;
+  color: white;
 }
 .contact .contact__box__redes span i {
   margin: 10px;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .footer {
   font-family: "Lemon/Milk", "sans-serif";
   width: 100%;
-  padding: 10px 0px;
+  padding: 20px 0px;
   color: #f5df4d;
   text-align: center;
   background-color: black;
+  font-size: 10px;
+  color: white;
 }
 
 /*RESPONSIVE*/
@@ -160,6 +269,14 @@ section.gallery img {
   .about__greazy-image {
     width: 50%;
     margin: 0 auto;
+  }
+  .about__greazy-image img:nth-child(4) {
+    display: block;
+  }
+
+  section.contact .contact__box img {
+    height: 200px;
+    background-position: 50%;
   }
 }
 @media screen and (min-width: 837px) {
@@ -178,18 +295,57 @@ section.gallery img {
     margin: 0 auto;
   }
   .about__greazy-image {
-    width: 30%;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .about__greazy-image img {
+    position: relative;
+    width: 65%;
+  }
+  .about__greazy-image img:nth-child(1) {
+    z-index: 4;
+  }
+  .about__greazy-image img:nth-child(2) {
+    opacity: 0.5;
+    margin-left: -150px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    z-index: 3;
+  }
+  .about__greazy-image img:nth-child(3) {
+    opacity: 0.3;
+    margin-left: -180px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    z-index: 2;
+  }
+  .about__greazy-image img:nth-child(4) {
+    opacity: 0.3;
+    margin-left: -180px;
+    margin-top: -80px;
+    margin-bottom: 80px;
+    z-index: 0.1;
+    display: block;
   }
   .about__greazy-info {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     background-color: black;
     color: #fff;
-    width: 40%;
+    width: 45%;
     text-align: left;
-    padding-left: 10px;
+    padding: 20px 10px;
+    z-index: 5;
   }
   .about__greazy-info__title {
-    color: #fff;
+    color: #f2f3cb;
+    margin: 20px 0px;
   }
 }
