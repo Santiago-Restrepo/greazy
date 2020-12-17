@@ -1,9 +1,14 @@
-mixin producto(imgUrl, nombre, precio)
+mixin producto(imgUrl, nombre, precio, mensaje)
     .product
-        img(src=""+imgUrl, alt="").product__image
+        .product__image
+            img(src=""+imgUrl, alt="")
+            .contact
+                a(href="https://www.instagram.com/__greazy__/?hl=es-la")
+                    i.fab.fa-instagram
+                a(href=""+mensaje)
+                    i.fab.fa-whatsapp           
         span.product__name #{nombre}
         span.product__price #{precio}
-
 
 <!DOCTYPE html>
 html(lang="es") 
@@ -22,26 +27,27 @@ html(lang="es")
                     h1.hero__container-title Greazy
                     button Contáctanos
         section.catalog
-            .catalog__carousel
+            .catalog__carousel-mobile
                 .catalog__carousel-item
+            .catalog_carousel-laptop
 
                 
         section.about__greazy
             .about__greazy-image
-                    img(src="images/DSC08582.jpg", alt="")
+                    img(src="images/DSC08582.jpg", alt="ANYTIME IS A GOOD TIME")
             .about__greazy-info
                 h2.about__greazy-info__title ANYTIME IS A GOOD TIME
                 p.about__greazy-info__descripton En Greazy rompemos con todo aquello que nos diga como y cuando vestirnos , buscando expresar frescura y crudeza en nuestros diseños y movimientos, demostrando asi que cualquiera puede pertenecer a Greazy Gang.
         section.gallery
-            img(src="../images/DSC08397.jpg", alt="")
+            img(src="../images/DSC08397.jpg", alt="Imagen decorativa")
             img(src="https://farm9.staticflickr.com/8107/8496890378_a313d62a38_b.jpg", alt="Medellín") 
-            img(src="../images/DSC08421.jpg", alt="")
+            img(src="../images/DSC08421.jpg", alt="Imagen decorativa")
             img(src="https://www.elcolombiano.com/documents/10157/0/853x562/0c0/0d0/none/11101/NJHQ/image_content_36870923_20201216144454.jpg", alt="Medellín")
-            img(src="../images/DSC08477.jpg", alt="")
+            img(src="../images/DSC08477.jpg", alt="Imagen decorativa")
             img(src="https://www.elcolombiano.com/documents/10157/0/649x365/35c0/580d365/none/11101/DLFL/image_content_36765791_20201130231215.jpg", alt="Medellín") 
-            img(src="../images/DSC08502.jpg", alt="")
+            img(src="../images/DSC08502.jpg", alt="Imagen decorativa")
             img(src="https://www.elcolombiano.com/documents/10157/0/584x365/2c0/580d365/none/11101/AXGF/image_content_36244892_20200821103433.jpg", alt="Medellín")
-            img(src="../images/DSC08519.jpg", alt="")
+            img(src="../images/DSC08519.jpg", alt="Imagen decorativa")
         section.contact
             .contact__box
                 // Izquierda - Abajo
@@ -55,10 +61,6 @@ html(lang="es")
                         i.fab.fa-facebook-f
             .contact__box
                 // Derecha - Arriba
-                //- img(src="https://i1.wp.com/craftingeek.me/wp-content/uploads/2018/03/accesorios-vintage-para-celular.jpg?resize=720%2C362&ssl=1", alt="")
+                img(src="https://cdn.pixabay.com/photo/2015/03/26/09/44/cell-phone-690192_960_720.jpg", alt="Contact")
         footer.footer
             span.rights ©2020 by Greazy
-
-
-
-        
