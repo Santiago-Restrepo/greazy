@@ -4,13 +4,10 @@
 /*Fuentes*/
 /*Tamaños*/
 /*general*/
-body {
+* {
   padding: 0;
   margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p, a {
-  margin: 0;
+  outline: none;
 }
 
 button {
@@ -37,7 +34,6 @@ button {
 /*hero*/
 .hero {
   height: 87vh;
-  width: 100vw;
   background-image: url("../images/DSC08502.jpg");
   background-size: cover;
   background-position: 50%;
