@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100&display=swap');
-
+@import url('//db.onlinewebfonts.com/c/67137b5f6928edc941186baaab5a664b?family=Lemon/Milk');
 /*Colores*/
 
 $Color-blanco:  #ffffff;
@@ -12,7 +12,7 @@ $Color-negro-total: #231f20;
 /*Fuentes*/
 
 $fuente1: 'Montserrat','sans-serif';
-$fuente2: 'Arial','sans-serif';
+$fuente2: 'Lemon/Milk','sans-serif';
 
 /*Tamaños*/
 
@@ -37,6 +37,9 @@ $break-laptop-L: 1440px;
 h1,h2,h3,h4,h5,h6,p,a{
 }
 
+h1{
+    font-family: $fuente2;
+}
 
 
 
