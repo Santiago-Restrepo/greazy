@@ -68,6 +68,7 @@ button{
     width: 100vw;
     background-image: url('../images/DSC08502.jpg');
     background-size: cover;
+    background-attachment: fixed;
     background-position: 50%;
     .hero__container{
         display: flex;
