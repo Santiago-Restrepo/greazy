@@ -1,30 +1,57 @@
-let $CarouselMobile= document.querySelector(".carousel__mobile");
-let $carouselItems = document.querySelectorAll(".product");
-let contador= 1;
-let width = $carouselItems[0].clientWidth;
-let intervalo= 1000;
+// let $CarouselMobile= document.querySelector(".catalog__carousel-mobile");
+// let $carouselItems = document.querySelectorAll(".product");
+// let contador= 1;
+// let width = $carouselItems[0].clientWidth;
+// let intervalo= 1000;
 
 
-setInterval(()=>{
-    slides();
-},intervalo);
+// setInterval(()=>{
+//     slides();
+// },intervalo);
 
-window.addEventListener('resize', ()=>{
-    console.log(screen.width)
-})
 
-function slides(){
-    $CarouselMobile.style.transform = "translatex("+(-screen.width*contador)+"px)"; 
-    $CarouselMobile.style.transition = "transform .5s"; 
-    contador++;
 
-    if(contador == $carouselItems.length){
-        setTimeout(()=>{
-            $CarouselMobile.style.transform = "translatex(0px)"; 
-            $CarouselMobile.style.transition = "transform 0s"; 
-            contador=0;
-        }, 1500)
-    }
+// function slides(){
+//     $CarouselMobile.style.transform = "translatex("+(-screen.width*contador)+"px)"; 
+//     $CarouselMobile.style.transition = "transform .5s"; 
+//     contador++;
+//     if(contador == $carouselItems.length){
+//         setTimeout(()=>{
+//             $CarouselMobile.style.transform = "translatex(0px)"; 
+//             $CarouselMobile.style.transition = "transform 0s"; 
+//             contador=0;
+//         }, 500)
+//     }
     
     
-}
+// }
+
+window.addEventListener('load', function(){
+	new Glider(document.querySelector('.carousel__lista'), {
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: '.carousel__indicadores',
+		arrows: {
+			prev: '.carousel__anterior',
+			next: '.carousel__siguiente'
+		},
+		responsive: [
+			{
+			  // screens greater than >= 775px
+			  breakpoint: 450,
+			  settings: {
+				// Set to `auto` and provide item width to adjust to viewport
+				slidesToShow: 2,
+				slidesToScroll: 2
+			  }
+			},{
+			  // screens greater than >= 1024px
+			  breakpoint: 800,
+			  settings: {
+				slidesToShow: 4,
+				slidesToScroll: 4
+			  }
+			}
+		]
+	});
+});

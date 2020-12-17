@@ -15,6 +15,7 @@ html(lang="es")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css")
         link(rel="stylesheet", href="css/estilos.css")
         link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous')
         title Greazy
@@ -27,12 +28,36 @@ html(lang="es")
                     h1.hero__container-title Greazy
                     button Contáctanos
         section.catalog
-            .catalog__carousel-mobile
-                .carousel__mobile
+            .carousel
+                .carousel__contenedor
+                    button.carousel__anterior
+                        i.fas.fa-arrow-left
+                    .carousel__lista
+                        +producto("images/DSC08421.jpg","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")            
+                        +producto("images/DSC08477.jpg","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")            
+                        +producto("images/DSC08502.jpg","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")            
+                        +producto("images/DSC08519.jpg","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")            
+                        +producto("images/DSC08535.jpg","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")            
+                        +producto("images/DSC08567.jpg","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")            
+                        +producto("images/DSC08572.jpg","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")            
+                        +producto("images/DSC08582.jpg","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")            
+                        +producto("images/DSC08663.jpg","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")            
+                        +producto("images/DSC08705.jpg","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")            
+                        +producto("images/DSC08737.jpg","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")            
+                        
+                    button.carousel__siguiente
+                        i.fas.fa-arrow-right
+                    .carousel__indicadores(role="tablist")
+            //- .catalog__carousel-mobile
+            //-     .carousel__mobile
                     +producto("images/camisa4.PNG","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
                     +producto("images/croptop1.PNG","Crop top 1", "50.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
                     +producto("images/riñonera1.PNG","riñonera1", "20.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
                     +producto("images/camisa4.PNG","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
+
+
+                    //- Combinar slides css con js
+
                     //- +producto("images/croptop1.PNG","Crop top 1", "50.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
                     //- +producto("images/riñonera1.PNG","riñonera1", "20.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
                     //- +producto("images/camisa4.PNG","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
@@ -44,7 +69,7 @@ html(lang="es")
     
 
             .catalog_carousel-laptop
-
+            
                 
         section.about__greazy
             .about__greazy-image
@@ -76,4 +101,5 @@ html(lang="es")
                         i.fab.fa-facebook-f 
         footer.footer
             span.rights ©2020 by Greazy
+        script(src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js")
         script(src="js/carousel-mobile.js")
