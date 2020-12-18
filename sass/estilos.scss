@@ -325,8 +325,12 @@ padding: 10px 0px;
     color: $Color-amarillo;
     text-align: center;
     background-color: black;
-    font-size: 10px;
-    color: white;
+    a{
+        background-color: $Color-blanco;
+        font-size: 10px;
+        color: white;
+        
+    }
 }
 
 
