@@ -46,7 +46,7 @@ h1{
 
 
 
-button,span,p{
+button,span,p,a{
     font-family: $fuente1;
 }
 
@@ -73,7 +73,7 @@ button,span,p{
 
 .hero{
     height: 87vh;
-    background-image: url('../images/DSC08502.jpg');
+    background-image: url('../images/DSC08502Opt.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: 50%;
@@ -90,15 +90,22 @@ button,span,p{
             color: white;
             font-weight: lighter;
         }
-        button{
-            width: 10em;
-            height: 3em;
+        a{  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 8em;
+            height: 2.5em;
             color: $Color-negro;
             background-color: $Color-blanco;
-            border-radius: .8em;
+            border-radius: .5em;
             border: none;
-            font-size: 1em;
+            font-size: 1.3em;
+            text-decoration: none;
             font-weight: 600;
+        }
+        a:hover{
+            background-color: #d3d3d3;
         }
     }
     
@@ -160,10 +167,6 @@ button,span,p{
                             }
                         }
                     }
-                    // &__image:hover{
-                    //     transform: perspective(17em) rotatey(180deg);    
-                        
-                    // }
                     span{
                         display: block;
                         width: fit-content;
@@ -442,6 +445,7 @@ padding: 10px 0px;
     }
     .hero{
         height: 85vh;
+        background-position-y: -60px;
     }
     .greazyRotate{
         width: 8em;
@@ -546,7 +550,7 @@ padding: 10px 0px;
 @media screen and (min-width: $break-laptop) {
 
     .hero{
-        background-position: 50% 50%;
+        background-position-y: -230px;
     }
     .catalog{
         

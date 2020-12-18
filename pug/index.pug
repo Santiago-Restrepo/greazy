@@ -19,6 +19,7 @@ html(lang="es")
         link(rel="stylesheet", href="css/estilos.css")
         link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous')
         title Greazy
+        link(rel='shortcut icon' href='../images/logoblanco.png' type='image/x-icon')
     body
         header.header
             .header__logo
@@ -26,7 +27,7 @@ html(lang="es")
         main.hero
                 .hero__container
                     img(src="images/logoblanco.png", alt="").greazyRotate
-                    button Contáctanos
+                    a(href="") Contáctanos
         section.catalog
             img(src="images/logoblanco.png", alt="loco de greazy girando").greazyRotate
             .carousel
@@ -50,27 +51,8 @@ html(lang="es")
                     button.carousel__siguiente
                         i.fas.fa-arrow-right
                     .carousel__indicadores(role="tablist")
-            //- .catalog__carousel-mobile
-            //-     .carousel__mobile
-                    +producto("images/camisa4.PNG","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
-                    +producto("images/croptop1.PNG","Crop top 1", "50.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
-                    +producto("images/riñonera1.PNG","riñonera1", "20.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
-                    +producto("images/camisa4.PNG","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
 
-
-                    //- Combinar slides css con js
-
-                    //- +producto("images/croptop1.PNG","Crop top 1", "50.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
-                    //- +producto("images/riñonera1.PNG","riñonera1", "20.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
-                    //- +producto("images/camisa4.PNG","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
-                    //- +producto("images/croptop1.PNG","Crop top 1", "50.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
-                    //- +producto("images/riñonera1.PNG","riñonera1", "20.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
-                    //- +producto("images/camisa4.PNG","Camisa 4", "55.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
-                    //- +producto("images/croptop1.PNG","Crop top 1", "50.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
-                    //- +producto("images/riñonera1.PNG","riñonera1", "20.000 COP", "https://api.whatsapp.com/send?phone=573104052315&text=Me%20interesa%20la%20camisa%204")
     
-
-            .catalog_carousel-laptop
             
                 
         section.about__greazy
@@ -83,15 +65,15 @@ html(lang="es")
                 h2.about__greazy-info__title ANYTIME IS A GOOD TIME
                 p.about__greazy-info__descripton En Greazy rompemos con todo aquello que nos diga como y cuando vestirnos , buscando expresar frescura y crudeza en nuestros diseños y movimientos, demostrando asi que cualquiera puede pertenecer a Greazy Gang.
         section.gallery
-            img(src="../images/DSC08397.jpg", alt="Imagen decorativa")
-            img(src="../images/GREAZYLANDINGMEDELLIN1.jpg", alt="Medellín") 
-            img(src="../images/DSC08421.jpg", alt="Imagen decorativa")
-            img(src="../images/GREAZYLANDINGMEDELLIN2.jpg", alt="Medellín")
-            img(src="../images/DSC08477.jpg", alt="Imagen decorativa")
-            img(src="../images/GREAZYLANDING 4.jpg", alt="Medellín") 
-            img(src="../images/DSC08663.jpg", alt="Imagen decorativa")
-            img(src="../images/GREAZYLANDING 5.jpg", alt="Medellín")
-            img(src="../images/DSC08519.jpg", alt="Imagen decorativa")
+            img(src="images/DSC08397.jpg", alt="Imagen decorativa")
+            img(src="images/GREAZYLANDINGMEDELLIN1.jpg", alt="Medellín") 
+            img(src="images/DSC08421.jpg", alt="Imagen decorativa")
+            img(src="images/GREAZYLANDINGMEDELLIN2.jpg", alt="Medellín")
+            img(src="images/DSC08477.jpg", alt="Imagen decorativa")
+            img(src="images/GREAZYLANDING 4.jpg", alt="Medellín") 
+            img(src="images/DSC08663.jpg", alt="Imagen decorativa")
+            img(src="images/GREAZYLANDING 5.jpg", alt="Medellín")
+            img(src="images/DSC08519.jpg", alt="Imagen decorativa")
         section.contact
             .contact__box
                 .contact__box__redes
@@ -102,6 +84,6 @@ html(lang="es")
                     span 
                         i.fab.fa-facebook-f 
         footer.footer
-            span.rights ©2020 by Greazy
+            span.rights ® 2020 by Greazy
         script(src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js")
         script(src="js/carousel-mobile.js")

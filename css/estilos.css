@@ -16,7 +16,7 @@ h1 {
   font-family: "Lemon/Milk", "sans-serif";
 }
 
-button, span, p {
+button, span, p, a {
   font-family: "Montserrat", "sans-serif";
 }
 
@@ -40,7 +40,7 @@ button, span, p {
 /*hero*/
 .hero {
   height: 87vh;
-  background-image: url("../images/DSC08502.jpg");
+  background-image: url("../images/DSC08502Opt.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: 50%;
@@ -59,15 +59,22 @@ button, span, p {
   color: white;
   font-weight: lighter;
 }
-.hero .hero__container button {
-  width: 10em;
-  height: 3em;
+.hero .hero__container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8em;
+  height: 2.5em;
   color: #23272a;
   background-color: #ffffff;
-  border-radius: 0.8em;
+  border-radius: 0.5em;
   border: none;
-  font-size: 1em;
+  font-size: 1.3em;
+  text-decoration: none;
   font-weight: 600;
+}
+.hero .hero__container a:hover {
+  background-color: #d3d3d3;
 }
 
 /*Carousel mobile*/
@@ -348,6 +355,7 @@ section.gallery img {
 
   .hero {
     height: 85vh;
+    background-position-y: -60px;
   }
 
   .greazyRotate {
@@ -416,7 +424,7 @@ section.gallery img {
 }
 @media screen and (min-width: 1024px) {
   .hero {
-    background-position: 50% 50%;
+    background-position-y: -230px;
   }
 
   .catalog .carousel__contenedor {
