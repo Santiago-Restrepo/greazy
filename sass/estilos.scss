@@ -52,6 +52,16 @@ button,span,p,a{
 
 /*secciones santi*/
 
+.lazyLoad {
+    width: 100%;
+    opacity: 0;
+}
+
+.visible {
+    transition: opacity 1000ms ease;
+    opacity: 1;
+}
+
 /*header*/
 
 .header{
