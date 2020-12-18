@@ -387,7 +387,8 @@ section.gallery img {
     grid-column: auto;
     width: 100%;
   }
-
+}
+@media screen and (min-width: 1200px) {
   .about__greazy {
     position: relative;
     width: 70%;
