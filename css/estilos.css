@@ -235,10 +235,10 @@ section.gallery img {
   text-align: center;
   width: 100%;
   padding: 15px 0px;
-  color: #f5df4d;
+  color: #ffffff;
 }
 .contact .contact__box h2 {
-  color: #f2f3cb;
+  color: #ffffff;
 }
 .contact .contact__box img {
   width: 100%;
@@ -252,9 +252,10 @@ section.gallery img {
   font-size: 40px;
   color: white;
 }
-.contact .contact__box__redes span i {
+.contact .contact__box__redes a i {
   margin: 10px;
   font-size: 30px;
+  color: white;
 }
 
 .footer {
@@ -265,9 +266,8 @@ section.gallery img {
   text-align: center;
   background-color: black;
 }
-.footer a {
-  background-color: #ffffff;
-  font-size: 10px;
+.footer span {
+  font-size: 12px;
   color: white;
 }
 
@@ -384,7 +384,7 @@ section.gallery img {
     width: 100%;
   }
 
-  .footer {
+  .footer .rights {
     font-size: 14px;
   }
 }
