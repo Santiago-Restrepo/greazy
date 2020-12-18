@@ -264,6 +264,9 @@ section.gallery img {
   color: #f5df4d;
   text-align: center;
   background-color: black;
+}
+.footer a {
+  background-color: #ffffff;
   font-size: 10px;
   color: white;
 }
