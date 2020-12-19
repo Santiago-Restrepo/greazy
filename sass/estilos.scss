@@ -52,14 +52,16 @@ button,span,p,a{
 
 /*secciones santi*/
 
-.lazyLoad {
-    width: 100%;
-    opacity: 0;
-}
 
-.visible {
-    transition: opacity 1000ms ease;
-    opacity: 1;
+.viewMore{
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 2em;
+    background-color: #ffffffb2;
+    color: $Color-negro;
 }
 
 /*header*/

@@ -16,6 +16,12 @@
 const $recuadrosCarousel= document.querySelectorAll('.product__image');
 const $lifeSentence= document.querySelector('.product:nth-of-type(4)')
 const $crowGang= document.querySelector('.product:nth-of-type(10)')
+const cuadroVerMas= document.createElement("span"); 
+cuadroVerMas.innerHTML= "Toca aquí para ver más";
+cuadroVerMas.classList.add('viewMore');
+
+// $crowGang.appendChild(cuadroVerMas);
+
 
 for (let i = 0; i < $recuadrosCarousel.length; i++) {
     const element = $recuadrosCarousel[i];
@@ -26,3 +32,5 @@ for (let i = 0; i < $recuadrosCarousel.length; i++) {
         element.childNodes[2].style.opacity='0';
     })
 }
+
+
