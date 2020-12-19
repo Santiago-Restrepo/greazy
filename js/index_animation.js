@@ -14,7 +14,8 @@
 //     removeLogo();
 // },4000);
 const $recuadrosCarousel= document.querySelectorAll('.product__image');
-
+const $lifeSentence= document.querySelector('.product:nth-of-type(4)')
+const $crowGang= document.querySelector('.product:nth-of-type(10)')
 
 for (let i = 0; i < $recuadrosCarousel.length; i++) {
     const element = $recuadrosCarousel[i];
