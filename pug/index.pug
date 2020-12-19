@@ -2,7 +2,7 @@ mixin producto(imgUrl, nombre, precio, mensaje)
     .product
         .product__image
             img(src=""+imgUrl, alt="")
-            .contact
+            .contacto
                 a(href="https://www.instagram.com/__greazy__/?hl=es-la")
                     i.fab.fa-instagram
                 a(href="https://www.facebook.com/Greazy-streetwear-101671948261008")
@@ -39,7 +39,9 @@ html(lang="es")
                         +producto("images/cultureO.jpg","CULTURE", "65.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20camisa%20%22Culture%22,%20podr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?")            
                         +producto("images/Rinoneragreazyblack.jpg","BLACK CANGURO", "60.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20ri%C3%B1onera%20%22Black%20Canguro%22%20podr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?")            
                         +producto("images/croptoplifesentence.jpg","CROP LIFE SENTENCE", "45.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20crop%20%22Life%20Sentence%22%20podr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?")            
+
                         +producto("images/Lifesentence.jpg","LIFE SENTENCE", "65.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20camisa%20%22Life%20Sentence%22%20podr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?")            
+
                         +producto("images/Rinoneragreazyred.jpg","RED CANGURO", "60.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20ri%C3%B1onera%20%22Red%20Canguro%22%20podr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?")            
                         +producto("images/Croptopgardenofeden.jpg","CROP GARDEN", "45.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20crop%20%22Garden%22%20podr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?")            
                         +producto("images/Gardenofeden.jpg","GARDEN OF EDEN", "65.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20camisa%20%22Garden%20of%20eden%22%20podr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?")            
@@ -87,6 +89,7 @@ html(lang="es")
         script(src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver")
         script(async src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js")
         script(async src="js/carousel-mobile.js")
+        script(async src="js/index_animation.js")
         
 
         link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css")

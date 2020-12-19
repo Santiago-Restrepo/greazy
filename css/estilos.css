@@ -38,7 +38,7 @@ button, span, p, a {
   align-items: center;
   width: 100%;
   height: 13vh;
-  background-color: BLACK;
+  background-color: #0a0909;
 }
 .header__logo {
   width: 5em;
@@ -52,6 +52,11 @@ button, span, p, a {
 .greazyRotate {
   width: 8em;
   margin-bottom: 1em;
+  animation: 10s logo infinite linear;
+}
+
+.glider-track {
+  align-items: flex-end;
 }
 
 .catalog {
@@ -61,7 +66,7 @@ button, span, p, a {
   align-items: center;
   justify-content: center;
   padding: 2em 0;
-  background-color: black;
+  background-color: #0a0909;
   color: #ffffff;
   overflow: hidden;
 }
@@ -87,19 +92,23 @@ button, span, p, a {
 .catalog .carousel__contenedor .carousel__lista .product__image img {
   width: 100%;
 }
-.catalog .carousel__contenedor .carousel__lista .product__image .contact {
+.catalog .carousel__contenedor .carousel__lista .product__image .contacto {
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 3em;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(10, 9, 9, 0.5);
+  opacity: 0;
+  transition: 0.2s ease-out;
 }
-.catalog .carousel__contenedor .carousel__lista .product__image .contact a {
+.catalog .carousel__contenedor .carousel__lista .product__image .contacto a {
   color: #ffffff;
 }
-.catalog .carousel__contenedor .carousel__lista .product__image .contact a i {
+.catalog .carousel__contenedor .carousel__lista .product__image .contacto a i {
   color: #ffffff;
   font-size: 2em;
 }
@@ -190,7 +199,7 @@ button, span, p, a {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  color: black;
+  color: #0a0909;
   width: 90%;
   padding: 20px 0px 0px 0px;
   margin: 20px auto 0px auto;
@@ -211,7 +220,7 @@ button, span, p, a {
 
 /* Galeria de 9 Fotos */
 section.gallery {
-  background-color: black;
+  background-color: #0a0909;
   width: 100%;
   padding: 10px 0px;
 }
@@ -228,7 +237,7 @@ section.gallery img {
 /* Sección de contacto */
 .contact {
   font-family: "Oswald", "sans-serif";
-  background-color: black;
+  background-color: #0a0909;
   width: 100%;
 }
 .contact .contact__box {
@@ -264,7 +273,7 @@ section.gallery img {
   padding: 20px 0px;
   color: #f5df4d;
   text-align: center;
-  background-color: black;
+  background-color: #0a0909;
 }
 .footer span {
   font-size: 12px;
@@ -486,7 +495,7 @@ section.gallery img {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    background-color: black;
+    background-color: #0a0909;
     color: #fff;
     width: 45%;
     text-align: left;
@@ -516,5 +525,11 @@ section.gallery img {
   }
   .catalog .carousel__contenedor .carousel__siguiente {
     right: 10px;
+  }
+}
+/*Animaciones*/
+@keyframes logo {
+  to {
+    transform: rotate(360deg);
   }
 }
