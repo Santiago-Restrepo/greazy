@@ -1,7 +1,7 @@
 mixin producto(imgUrl, nombre, precio, mensaje)
     .product
         .product__image
-            img(src=""+imgUrl, alt="")
+            img(loading="lazy", src=""+imgUrl, alt="")
             .contacto
                 a(href="https://www.instagram.com/__greazy__/?hl=es-la")
                     i.fab.fa-instagram
@@ -25,13 +25,13 @@ html(lang="es")
     body
         header.header
             .header__logo
-                img(src="images/logo.png", alt="Logo de greazy")
+                img(loading="lazy", src="images/logo.png", alt="Logo de greazy")
         main.hero
                 .hero__container
-                    img(src="images/logoblanco.png", alt="").greazyRotate
+                    img(loading="lazy", src="images/logoblanco.png", alt="").greazyRotate
                     a(href="https://api.whatsapp.com/send?phone=573226330880&text=Hola%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20interesa%20conocer%20m%C3%A1s%20de%20ustedes") Contáctanos
         section.catalog
-            img(src="images/logoblanco.png", alt="loco de greazy girando").greazyRotate
+            img(loading="lazy", src="images/logoblanco.png", alt="loco de greazy girando").greazyRotate
             .carousel
                 .carousel__contenedor
                     button.carousel__anterior
@@ -56,23 +56,23 @@ html(lang="es")
                     .carousel__indicadores(role="tablist")      
         section.about__greazy
             .about__greazy-image
-                    img(src="images/DSC08567.jpg", alt="ANYTIME IS A GOOD TIME") 
-                    img(src="images/DSC08567.jpg", alt="ANYTIME IS A GOOD TIME") 
-                    img(src="images/DSC08567.jpg", alt="ANYTIME IS A GOOD TIME") 
-                    img(src="images/DSC08567.jpg", alt="ANYTIME IS A GOOD TIME") 
+                    img(loading="lazy", src="images/DSC08567.jpg", alt="ANYTIME IS A GOOD TIME") 
+                    img(loading="lazy", src="images/DSC08567.jpg", alt="ANYTIME IS A GOOD TIME") 
+                    img(loading="lazy", src="images/DSC08567.jpg", alt="ANYTIME IS A GOOD TIME") 
+                    img(loading="lazy", src="images/DSC08567.jpg", alt="ANYTIME IS A GOOD TIME") 
             .about__greazy-info
                 h2.about__greazy-info__title ANYTIME IS A GOOD TIME
                 p.about__greazy-info__descripton En Greazy rompemos con todo aquello que nos diga como y cuando vestirnos, buscando expresar frescura y crudeza en nuestros diseños y movimientos, demostrando asi que cualquiera puede pertenecer a Greazy Gang.
         section.gallery
-            img(src="images/DSC08397.jpg", alt="Imagen decorativa")
-            img(src="images/GREAZYLANDINGMEDELLIN1.jpg", alt="Medellín")
-            img(src="images/DSC08421.jpg", alt="Imagen decorativa")
-            img(src="images/GREAZYLANDINGMEDELLIN2.jpg", alt="Medellín")
-            img(src="images/DSC08477.jpg", alt="Imagen decorativa")
-            img(src="images/GREAZYLANDING 4.jpg", alt="Medellín")
-            img(src="images/DSC08663.jpg", alt="Imagen decorativa")
-            img(src="images/GREAZYLANDING 5.jpg", alt="Medellín")
-            img(src="images/DSC08519.jpg", alt="Imagen decorativa")
+            img(loading="lazy", src="images/DSC08397.jpg", alt="Imagen decorativa")
+            img(loading="lazy", src="images/GREAZYLANDINGMEDELLIN1.jpg", alt="Medellín")
+            img(loading="lazy", src="images/DSC08421.jpg", alt="Imagen decorativa")
+            img(loading="lazy", src="images/GREAZYLANDINGMEDELLIN2.jpg", alt="Medellín")
+            img(loading="lazy", src="images/DSC08477.jpg", alt="Imagen decorativa")
+            img(loading="lazy", src="images/GREAZYLANDING 4.jpg", alt="Medellín")
+            img(loading="lazy", src="images/DSC08663.jpg", alt="Imagen decorativa")
+            img(loading="lazy", src="images/GREAZYLANDING 5.jpg", alt="Medellín")
+            img(loading="lazy", src="images/DSC08519.jpg", alt="Imagen decorativa")
 
         section.contact
             .contact__box
