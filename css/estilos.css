@@ -482,6 +482,7 @@ section.gallery img {
   .about__greazy-image img {
     position: relative;
     width: 65%;
+    margin-left: 35px;
   }
   .about__greazy-image img:nth-child(1) {
     z-index: 4;
