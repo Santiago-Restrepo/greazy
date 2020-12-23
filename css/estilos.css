@@ -12,7 +12,7 @@
   outline: none;
 }
 
-h1 {
+h1, h2 {
   font-family: "Oswald", "sans-serif";
 }
 
@@ -21,17 +21,6 @@ button, span, p, a {
 }
 
 /*secciones santi*/
-.viewMore {
-  position: absolute;
-  display: block;
-  top: 0;
-  right: 0;
-  width: 20%;
-  height: 2em;
-  background-color: #ffffffb2;
-  color: #0a0909;
-}
-
 /*header*/
 .header {
   display: flex;
@@ -60,6 +49,10 @@ button, span, p, a {
   align-items: flex-end;
 }
 
+.vuelta {
+  transform: perspective(2000px) rotateY(180deg);
+}
+
 .catalog {
   box-sizing: border-box;
   display: flex;
@@ -70,6 +63,10 @@ button, span, p, a {
   background-color: #0a0909;
   color: #ffffff;
   overflow: hidden;
+}
+.catalog h2 {
+  margin-bottom: 0.5em;
+  color: #ffffff;
 }
 .catalog .carousel {
   display: flex;
@@ -121,6 +118,20 @@ button, span, p, a {
   margin-left: 16%;
   margin-bottom: 0.5em;
   color: #ffffff;
+}
+.catalog .carousel__contenedor .carousel__lista .product .viewMore {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 8em;
+  padding: 0.1em;
+  height: auto;
+  background-color: #ffffffb2;
+  color: #0a0909;
+  text-align: center;
+  font-size: 600;
+  font-family: "Oswald", "sans-serif";
 }
 .catalog .carousel__contenedor .carousel__siguiente, .catalog .carousel__contenedor .carousel__anterior {
   z-index: 1;
@@ -347,6 +358,9 @@ section.gallery img {
     margin-bottom: 2em;
   }
 
+  .catalog h2 {
+    margin-bottom: 1em;
+  }
   .catalog .carousel__contenedor {
     width: 90%;
     max-width: 50em;
@@ -411,6 +425,10 @@ section.gallery img {
     background-position-y: -230px;
   }
 
+  .catalog h2 {
+    margin-bottom: 2em;
+    font-size: 1.8em;
+  }
   .catalog .carousel__contenedor {
     max-width: 70em;
   }

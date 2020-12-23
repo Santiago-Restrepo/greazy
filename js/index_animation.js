@@ -14,13 +14,47 @@
 //     removeLogo();
 // },4000);
 const $recuadrosCarousel= document.querySelectorAll('.product__image');
-const $lifeSentence= document.querySelector('.product:nth-of-type(4)')
-const $crowGang= document.querySelector('.product:nth-of-type(10)')
-const cuadroVerMas= document.createElement("span"); 
-cuadroVerMas.innerHTML= "Toca aquí para ver más";
-cuadroVerMas.classList.add('viewMore');
+const $lifeSentence= document.querySelector('.product:nth-of-type(4) > .product__image')
+const $crowGang= document.querySelector('.product:nth-of-type(10) > .product__image')
+const cuadroVerMasCrow= document.createElement("span"); 
+const cuadroVerMasLife= document.createElement("span"); 
+cuadroVerMasCrow.innerHTML= "Toca aquí para ver más";
+cuadroVerMasLife.innerHTML= "Toca aquí para ver más";
+cuadroVerMasCrow.classList.add('viewMore');
+cuadroVerMasLife.classList.add('viewMore');
 
-// $crowGang.appendChild(cuadroVerMas);
+$crowGang.appendChild(cuadroVerMasCrow);
+$lifeSentence.appendChild(cuadroVerMasLife);
+
+cuadroVerMasCrow.addEventListener('click', (e)=>{
+    cuadroVerMasCrow.parentElement.classList.toggle('vuelta');
+
+    if(cuadroVerMasCrow.parentElement.classList.contains('vuelta')){
+        cuadroVerMasCrow.style.transform='rotateY(180deg)';
+        cuadroVerMasCrow.parentElement.childNodes[2].style.transform='rotateY(180deg)';
+        cuadroVerMasCrow.parentElement.childNodes[0].setAttribute('src','images/Crowgangespalda.jpg');
+    }else{
+        cuadroVerMasCrow.style.transform='rotateY(0deg)';
+        cuadroVerMasCrow.parentElement.childNodes[2].style.transform='rotateY(0deg)';
+        cuadroVerMasCrow.parentElement.childNodes[0].setAttribute('src','images/Crowgang.jpg');
+    }
+
+});
+cuadroVerMasLife.addEventListener('click', (e)=>{
+    cuadroVerMasLife.parentElement.classList.toggle('vuelta');
+
+    if(cuadroVerMasLife.parentElement.classList.contains('vuelta')){
+        cuadroVerMasLife.style.transform='rotateY(180deg)';
+        cuadroVerMasLife.parentElement.childNodes[2].style.transform='rotateY(180deg)';
+        cuadroVerMasLife.parentElement.childNodes[0].setAttribute('src','images/Lifesentenceespalda.jpg');
+    }else{
+        cuadroVerMasLife.style.transform='rotateY(0deg)';
+        cuadroVerMasLife.parentElement.childNodes[2].style.transform='rotateY(0deg)';
+        cuadroVerMasLife.parentElement.childNodes[0].setAttribute('src','images/Lifesentence.jpg');
+    }
+
+});
+
 
 
 for (let i = 0; i < $recuadrosCarousel.length; i++) {
