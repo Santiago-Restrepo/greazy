@@ -89,6 +89,12 @@ button,span,p,a{
 .vuelta{
     transform: perspective(2000px) rotateY(180deg);
 }
+.bordeIzquierda{
+    border-bottom-left-radius: 1em;
+}
+.bordeDerecha{
+    border-bottom-right-radius: 1em;
+}
 
 
 .catalog{
@@ -104,7 +110,7 @@ button,span,p,a{
 
     h2{
         margin-bottom: .5em;
-        color: $Color-blanco;
+        color: #cacaca;
     }
     
     .carousel{
@@ -168,7 +174,7 @@ button,span,p,a{
                         background-color: #ffffffb2;
                         color: $Color-negro;
                         text-align: center;
-                        font-size: 600;
+                        font-weight: 400;
                         font-family: $fuente2;
                     }
                 }

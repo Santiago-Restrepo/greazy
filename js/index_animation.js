@@ -25,6 +25,8 @@ cuadroVerMasLife.classList.add('viewMore');
 
 $crowGang.appendChild(cuadroVerMasCrow);
 $lifeSentence.appendChild(cuadroVerMasLife);
+cuadroVerMasCrow.parentElement.childNodes[4].classList.add('bordeIzquierda');
+cuadroVerMasLife.parentElement.childNodes[4].classList.add('bordeIzquierda');
 
 cuadroVerMasCrow.addEventListener('click', (e)=>{
     cuadroVerMasCrow.parentElement.classList.toggle('vuelta');
@@ -32,9 +34,14 @@ cuadroVerMasCrow.addEventListener('click', (e)=>{
     if(cuadroVerMasCrow.parentElement.classList.contains('vuelta')){
         cuadroVerMasCrow.style.transform='rotateY(180deg)';
         cuadroVerMasCrow.parentElement.childNodes[2].style.transform='rotateY(180deg)';
+        cuadroVerMasCrow.parentElement.childNodes[4].classList.add('bordeDerecha');
+        cuadroVerMasCrow.parentElement.childNodes[4].classList.remove('bordeIzquierda');
         cuadroVerMasCrow.parentElement.childNodes[0].setAttribute('src','images/Crowgangespalda.jpg');
     }else{
         cuadroVerMasCrow.style.transform='rotateY(0deg)';
+        cuadroVerMasCrow.parentElement.childNodes[2].style.transform='rotateY(180deg)';
+        cuadroVerMasCrow.parentElement.childNodes[4].classList.remove('bordeDerecha');
+        cuadroVerMasCrow.parentElement.childNodes[4].classList.add('bordeIzquierda');
         cuadroVerMasCrow.parentElement.childNodes[2].style.transform='rotateY(0deg)';
         cuadroVerMasCrow.parentElement.childNodes[0].setAttribute('src','images/Crowgang.jpg');
     }
@@ -46,10 +53,14 @@ cuadroVerMasLife.addEventListener('click', (e)=>{
     if(cuadroVerMasLife.parentElement.classList.contains('vuelta')){
         cuadroVerMasLife.style.transform='rotateY(180deg)';
         cuadroVerMasLife.parentElement.childNodes[2].style.transform='rotateY(180deg)';
+        cuadroVerMasLife.parentElement.childNodes[4].classList.add('bordeDerecha');
+        cuadroVerMasLife.parentElement.childNodes[4].classList.remove('bordeIzquierda');
         cuadroVerMasLife.parentElement.childNodes[0].setAttribute('src','images/Lifesentenceespalda.jpg');
     }else{
         cuadroVerMasLife.style.transform='rotateY(0deg)';
         cuadroVerMasLife.parentElement.childNodes[2].style.transform='rotateY(0deg)';
+        cuadroVerMasLife.parentElement.childNodes[4].classList.remove('bordeDerecha');
+        cuadroVerMasLife.parentElement.childNodes[4].classList.add('bordeIzquierda');
         cuadroVerMasLife.parentElement.childNodes[0].setAttribute('src','images/Lifesentence.jpg');
     }
 

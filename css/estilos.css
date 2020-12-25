@@ -53,6 +53,14 @@ button, span, p, a {
   transform: perspective(2000px) rotateY(180deg);
 }
 
+.bordeIzquierda {
+  border-bottom-left-radius: 1em;
+}
+
+.bordeDerecha {
+  border-bottom-right-radius: 1em;
+}
+
 .catalog {
   box-sizing: border-box;
   display: flex;
@@ -66,7 +74,7 @@ button, span, p, a {
 }
 .catalog h2 {
   margin-bottom: 0.5em;
-  color: #ffffff;
+  color: #cacaca;
 }
 .catalog .carousel {
   display: flex;
@@ -130,7 +138,7 @@ button, span, p, a {
   background-color: #ffffffb2;
   color: #0a0909;
   text-align: center;
-  font-size: 600;
+  font-weight: 400;
   font-family: "Oswald", "sans-serif";
 }
 .catalog .carousel__contenedor .carousel__siguiente, .catalog .carousel__contenedor .carousel__anterior {
