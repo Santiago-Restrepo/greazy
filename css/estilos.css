@@ -303,7 +303,7 @@ section.gallery img {
 /*RESPONSIVE*/
 @media screen and (min-width: 375px) {
   .catalog .carousel__contenedor {
-    max-width: 30em;
+    max-width: 28em;
   }
   .catalog .carousel__contenedor .carousel__lista .product__image {
     width: 20em;
