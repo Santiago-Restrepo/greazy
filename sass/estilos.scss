@@ -46,8 +46,20 @@ h1,h2{
 
 
 
-button,span,p,a{
+button,span,p,a,marquee{
     font-family: $fuente1;
+}
+
+.notice{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: .1em 0;
+    background-color: #35B82C;
+    justify-self: flex-start;
+    font-weight: 500;
+    color: $Color-blanco;
 }
 
 /*secciones santi*/
@@ -59,14 +71,19 @@ button,span,p,a{
 
 .header{
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
     height: 13vh;
     background-color: $Color-negro;
     &__logo{
+        display: flex;
+        align-items: center;
         width: 5em;
+        height: 100%;
+
         img{
+            height: fit-content;
             width: 100%;
         }
     }
