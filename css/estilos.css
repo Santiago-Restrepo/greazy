@@ -21,15 +21,13 @@ button, span, p, a, marquee {
 }
 
 .notice {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   padding: 0.1em 0;
   background-color: #35B82C;
   justify-self: flex-start;
   font-weight: 500;
   color: #ffffff;
+  text-align: center;
 }
 
 /*secciones santi*/
