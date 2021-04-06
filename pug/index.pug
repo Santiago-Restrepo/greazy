@@ -4,11 +4,11 @@ mixin producto(imgUrl, nombre, precio, mensaje, descuento)
             img(loading="lazy", src=""+imgUrl, alt="")
             span.discount #{descuento}
             .contacto
-                a(href="https://www.instagram.com/__greazy__/?hl=es-la" target="_blank")
+                a(href="https://www.instagram.com/__greazy__/?hl=es-la" target="_blank" rel="noopener" alt="Enlace a instagram" name="Enlace a instagram")
                     i.fab.fa-instagram
-                a(href="https://www.facebook.com/Greazy-streetwear-101671948261008" target="_blank")
+                a(href="https://www.facebook.com/Greazy-streetwear-101671948261008" target="_blank" rel="noopener" alt="Enlace a facebook" name="Enlace a facebook")
                     i.fab.fa-facebook-f
-                a(href=""+mensaje target="_blank")
+                a(href=""+mensaje target="_blank" rel="noopener" alt="Enlace a Whatsapp" name="Enlace a Whatsapp")
                     i.fab.fa-whatsapp           
         span.product__name #{nombre}
         span.product__price #{precio}
@@ -21,11 +21,11 @@ mixin productoDoble(imgUrl, nombre, precio, mensaje, imgUrl2, descuento)
             span.viewMore Ver más
             span.discount #{descuento}
             .contacto
-                a(href="https://www.instagram.com/__greazy__/?hl=es-la" target="_blank")
+                a(href="https://www.instagram.com/__greazy__/?hl=es-la" target="_blank" rel="noopener" alt="Enlace a instagram" name="Enlace a instagram")
                     i.fab.fa-instagram
-                a(href="https://www.facebook.com/Greazy-streetwear-101671948261008" target="_blank")
+                a(href="https://www.facebook.com/Greazy-streetwear-101671948261008" target="_blank" rel="noopener" alt="Enlace a facebook" name="Enlace a facebook")
                     i.fab.fa-facebook-f
-                a(href=""+mensaje target="_blank")
+                a(href=""+mensaje target="_blank" rel="noopener" alt="Enlace a Whatsapp" name="Enlace a Whatsapp")
                     i.fab.fa-whatsapp
         span.productDouble__name #{nombre}
         span.productDouble__price #{precio}
@@ -55,19 +55,20 @@ html(lang="es")
             h2 Toca lo que te guste y pídelo
             .carousel
                 .carousel__contenedor
-                    button.carousel__anterior
+                    button(name="Botón anterior" alt="Botón anterior").carousel__anterior
                         i.fas.fa-arrow-left
                     .carousel__lista
-                        +producto("images/Greazybasicwhite.jpg","GREAZY BASIC W/R", "41.200 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Greazy%20Basic%20W/R,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")
+                        +productoDoble("images/DSC01890-ED-AZ.jpg","RAINBOW", "65.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20la%20prenda%20Rainbow,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01900-ED-AZ.jpg")
                         +producto("images/cultureO.jpg","CULTURE", "48.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20la%20camisa%20Culture,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")
                         +productoDoble("images/DSC01645-ED-AZ.jpg","GREAZY BASIC W/RF", "55.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Greazy%20Basic%20W/RF,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01641-ED-AZ.jpg")
                         //- +producto("images/Rinoneragreazyblack.jpg","BLACK CANGURO", "60.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20ri%C3%B1onera%20Black%20Canguro,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?")            
                         +producto("images/croptoplifesentence.jpg","CROP LIFE SENTENCE", "33.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20crop%20Life%20Sentence,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")            
                         +productoDoble("images/DSC01576-ED-AZ.jpg","GREAZY BASIC B/T", "55.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20Greazy%20Basic%20B/T,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01683-ED-AZ.jpg")
-                        +productoDoble("images/Lifesentence.jpg","LIFE SENTENCE", "48.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20camisa%20Life%20Sentence,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?", "images/Lifesentenceespalda.jpg","40%")(class="old")            
+                        +productoDoble("images/Lifesentence.jpg","LIFE SENTENCE", "48.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20camisa%20Life%20Sentence,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?", "images/Lifesentenceespalda.jpg","25%")(class="old")            
+                        +productoDoble("images/DSC01859-ED-AZ.jpg","LONG CROP WHITE", "50.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Long%20Crop%20White,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01860-ED-AZ.jpg")
                         //- +producto("images/Rinoneragreazyred.jpg","RED CANGURO", "60.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20ri%C3%B1onera%20Red%20Canguro,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?")            
+                        +productoDoble("images/DSC01871-ED-AZ.jpg","LONG CROP BLACK", "50.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Long%20Crop%20Black,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01869-ED-AZ.jpg")
                         +producto("images/Croptopgardenofeden.jpg","CROP GARDEN", "33.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20crop%20Garden,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")            
-                        +productoDoble("images/DSC01890-ED-AZ.jpg","RAINBOW", "65.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20la%20prenda%20Rainbow,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01900-ED-AZ.jpg")
                         +productoDoble("images/DSC02053-ED-AZ.jpg","GREAZY BODY WHITE", "50.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Greazy%20Body%20White,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC02081-ED-AZ.jpg")
                         +producto("images/Gardenofeden.jpg","GARDEN OF EDEN", "48.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20camisa%20Garden%20of%20Eden,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")   
                         //- +producto("images/Rinoneragreazywhite.jpg","WHITE CANGURO", "60.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20ri%C3%B1onera%20White%20Canguro,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?")            
@@ -75,17 +76,16 @@ html(lang="es")
                         +productoDoble("images/Crowgang.jpg","CROW GANG", "48.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20crow%20Gang,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?", "images/Crowgangespalda.jpg","25%")(class="old")
                         +productoDoble("images/DSC02036-ED-AZ.jpg","HOODIE TRIP", "90.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Hoodie%20Trip,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC02001-ED-AZ.jpg")
                         +producto("images/Greazybasicblack(1).jpg","GREAZY BASIC B/W", "41.200 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20Greazy%20Basic%20B/W,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")            
-                        +productoDoble("images/DSC01859-ED-AZ.jpg","LONG CROP WHITE", "50.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Long%20Crop%20White,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01860-ED-AZ.jpg")
-                        +productoDoble("images/DSC01871-ED-AZ.jpg","LONG CROP BLACK", "50.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Long%20Crop%20Black,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01869-ED-AZ.jpg")
                         +productoDoble("images/DSC01885-ED-AZ.jpg","MIRROR", "55.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20la%20prenda%20Mirror,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01906-ED-AZ.jpg")
                         +producto("images/Greazybasicwhite.jpg","GREAZY BASIC W/R", "41.200 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20Greazy%20Basic%20W/R,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")
+                        +productoDoble("images/DSC01890-ED-AZ.jpg","RAINBOW", "65.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20la%20prenda%20Rainbow,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01900-ED-AZ.jpg")
                         +producto("images/cultureO.jpg","CULTURE", "65.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20camisa%20Culture,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")
 
 
                         
-                    button.carousel__siguiente
+                    button(name="Botón siguiente" alt="Botón siguiente").carousel__siguiente
                         i.fas.fa-arrow-right
-                    .carousel__indicadores(role="tablist")
+                    .carousel__indicadores(role="tablist" class="dots")
         section.about__greazy
             .about__greazy-image
                     img(loading="lazy", src="images/DSC01839-ED-AZ.jpg", alt="ANYTIME IS A GOOD TIME") 
@@ -109,12 +109,12 @@ html(lang="es")
         section.contact
             .contact__box
                 .contact__box__redes
-                    a(href="https://www.instagram.com/__greazy__/?hl=es-la") 
-                        i.fab.fa-instagram 
-                    a(href="https://api.whatsapp.com/send?phone=573226330880&text=Hola%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20interesa%20conocer%20m%C3%A1s%20de%20ustedes") 
+                    a(href="https://www.instagram.com/__greazy__/?hl=es-la" target="_blank" rel="noopener" alt="Enlace a instagram" name="Enlace a instagram")
+                        i.fab.fa-instagram
+                    a(href="https://www.facebook.com/Greazy-streetwear-101671948261008" target="_blank" rel="noopener" alt="Enlace a facebook" name="Enlace a facebook")
+                        i.fab.fa-facebook-f
+                    a(href=""+mensaje target="_blank" rel="noopener" alt="Enlace a Whatsapp" name="Enlace a Whatsapp")
                         i.fab.fa-whatsapp
-                    a(href="https://www.facebook.com/Greazy-streetwear-101671948261008") 
-                        i.fab.fa-facebook-f 
         footer.footer
             span.rights ® 2020 by Greazy
         script(src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver")

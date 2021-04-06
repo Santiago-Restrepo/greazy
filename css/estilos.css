@@ -142,7 +142,7 @@ button, span, p, a, marquee {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #e9372a;
+  background-color: #c32014;
   padding: 0.3em 0.5em;
   font-size: 1.2em;
   font-weight: 500;
@@ -192,6 +192,7 @@ button, span, p, a, marquee {
   right: 40px;
 }
 .catalog .carousel__contenedor .glider-dots {
+  width: 14em;
   padding: 0 1em;
 }
 .catalog .carousel__contenedor .glider-dot {
