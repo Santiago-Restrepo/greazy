@@ -21,6 +21,7 @@ button, span, p, a, marquee {
 }
 
 .notice {
+  display: none;
   width: 100%;
   padding: 0.1em 0;
   background-color: #35B82C;
@@ -66,15 +67,7 @@ button, span, p, a, marquee {
 }
 
 .vuelta {
-  transform: perspective(2000px) rotateY(180deg);
-}
-
-.bordeIzquierda {
-  border-bottom-left-radius: 1em;
-}
-
-.bordeDerecha {
-  border-bottom-right-radius: 1em;
+  transform: rotateY(180deg);
 }
 
 .catalog {
@@ -101,7 +94,7 @@ button, span, p, a, marquee {
   width: 100%;
   max-width: 25em;
 }
-.catalog .carousel__contenedor .carousel__lista .product__image {
+.catalog .carousel__contenedor .carousel__lista .product__image, .catalog .carousel__contenedor .carousel__lista .productDouble__image {
   position: relative;
   width: 17em;
   margin: 0 auto;
@@ -111,10 +104,10 @@ button, span, p, a, marquee {
   height: fit-content;
   transition: ease-out 0.5s;
 }
-.catalog .carousel__contenedor .carousel__lista .product__image img {
+.catalog .carousel__contenedor .carousel__lista .product__image img, .catalog .carousel__contenedor .carousel__lista .productDouble__image img {
   width: 100%;
 }
-.catalog .carousel__contenedor .carousel__lista .product__image .contacto {
+.catalog .carousel__contenedor .carousel__lista .product__image .contacto, .catalog .carousel__contenedor .carousel__lista .productDouble__image .contacto {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -127,14 +120,14 @@ button, span, p, a, marquee {
   opacity: 0;
   transition: 0.2s ease-out;
 }
-.catalog .carousel__contenedor .carousel__lista .product__image .contacto a {
+.catalog .carousel__contenedor .carousel__lista .product__image .contacto a, .catalog .carousel__contenedor .carousel__lista .productDouble__image .contacto a {
   color: #ffffff;
 }
-.catalog .carousel__contenedor .carousel__lista .product__image .contacto a i {
+.catalog .carousel__contenedor .carousel__lista .product__image .contacto a i, .catalog .carousel__contenedor .carousel__lista .productDouble__image .contacto a i {
   color: #ffffff;
   font-size: 2em;
 }
-.catalog .carousel__contenedor .carousel__lista .product span {
+.catalog .carousel__contenedor .carousel__lista .product span, .catalog .carousel__contenedor .carousel__lista .productDouble span {
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -143,7 +136,10 @@ button, span, p, a, marquee {
   margin-bottom: 0.5em;
   color: #ffffff;
 }
-.catalog .carousel__contenedor .carousel__lista .product .viewMore {
+.catalog .carousel__contenedor .carousel__lista .productDouble__image {
+  position: relative;
+}
+.catalog .carousel__contenedor .carousel__lista .productDouble .viewMore {
   position: absolute;
   display: block;
   top: 0;
@@ -151,11 +147,20 @@ button, span, p, a, marquee {
   width: 8em;
   padding: 0.1em;
   height: auto;
-  background-color: #ffffffb2;
+  background-color: #ffffff;
   color: #0a0909;
   text-align: center;
   font-weight: 400;
   font-family: "Oswald", "sans-serif";
+  transition: 0.5s ease;
+  opacity: 0.75;
+  cursor: pointer;
+}
+.catalog .carousel__contenedor .carousel__lista .productDouble .viewMore:hover {
+  opacity: 1;
+}
+.catalog .carousel__contenedor .carousel__lista .productDouble .hide {
+  display: none;
 }
 .catalog .carousel__contenedor .carousel__siguiente, .catalog .carousel__contenedor .carousel__anterior {
   z-index: 1;
@@ -321,13 +326,13 @@ section.gallery img {
   .catalog .carousel__contenedor {
     max-width: 28em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product__image {
+  .catalog .carousel__contenedor .carousel__lista .product__image, .catalog .carousel__contenedor .carousel__lista .productDouble__image {
     width: 20em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product__image .content {
+  .catalog .carousel__contenedor .carousel__lista .product__image .content, .catalog .carousel__contenedor .carousel__lista .productDouble__image .content {
     height: 10em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product span {
+  .catalog .carousel__contenedor .carousel__lista .product span, .catalog .carousel__contenedor .carousel__lista .productDouble span {
     margin-left: 17%;
   }
   .catalog .carousel__contenedor .carousel__anterior {
@@ -363,7 +368,7 @@ section.gallery img {
   .catalog .carousel__contenedor {
     max-width: 30em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product__image {
+  .catalog .carousel__contenedor .carousel__lista .product__image, .catalog .carousel__contenedor .carousel__lista .productDouble__image {
     width: 20em;
   }
 }
@@ -389,10 +394,10 @@ section.gallery img {
     width: 90%;
     max-width: 50em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product__image {
+  .catalog .carousel__contenedor .carousel__lista .product__image, .catalog .carousel__contenedor .carousel__lista .productDouble__image {
     width: 18em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product span {
+  .catalog .carousel__contenedor .carousel__lista .product span, .catalog .carousel__contenedor .carousel__lista .productDouble span {
     margin-left: 10%;
   }
   .catalog .carousel__contenedor .carousel__anterior {
@@ -406,10 +411,10 @@ section.gallery img {
   .catalog .carousel__contenedor {
     max-width: 60em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product__image {
+  .catalog .carousel__contenedor .carousel__lista .product__image, .catalog .carousel__contenedor .carousel__lista .productDouble__image {
     width: 18em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product span {
+  .catalog .carousel__contenedor .carousel__lista .product span, .catalog .carousel__contenedor .carousel__lista .productDouble span {
     margin-left: 16.5%;
   }
   .catalog .carousel__contenedor .carousel__anterior, .catalog .carousel__contenedor .carousel__siguiente {
@@ -437,10 +442,10 @@ section.gallery img {
   }
 }
 @media screen and (min-width: 950px) {
-  .catalog .carousel__contenedor .carousel__lista .product__image {
+  .catalog .carousel__contenedor .carousel__lista .product__image, .catalog .carousel__contenedor .carousel__lista .productDouble__image {
     width: 20em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product span {
+  .catalog .carousel__contenedor .carousel__lista .product span, .catalog .carousel__contenedor .carousel__lista .productDouble span {
     margin-left: 13%;
   }
 }
@@ -456,11 +461,17 @@ section.gallery img {
   .catalog .carousel__contenedor {
     max-width: 70em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product__image {
+  .catalog .carousel__contenedor .carousel__lista .product, .catalog .carousel__contenedor .carousel__lista .productDouble {
+    transition: 0.7s ease;
+  }
+  .catalog .carousel__contenedor .carousel__lista .product__image, .catalog .carousel__contenedor .carousel__lista .productDouble__image {
     width: 17em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product span {
+  .catalog .carousel__contenedor .carousel__lista .product span, .catalog .carousel__contenedor .carousel__lista .productDouble span {
     margin-left: 10%;
+  }
+  .catalog .carousel__contenedor .carousel__lista .left-1, .catalog .carousel__contenedor .carousel__lista .right-1 {
+    opacity: 0.3;
   }
   .catalog .carousel__contenedor .carousel__anterior {
     left: 5px;
@@ -473,10 +484,10 @@ section.gallery img {
   .catalog .carousel__contenedor {
     max-width: 80em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product__image {
+  .catalog .carousel__contenedor .carousel__lista .product__image, .catalog .carousel__contenedor .carousel__lista .productDouble__image {
     width: 17em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product span {
+  .catalog .carousel__contenedor .carousel__lista .product span, .catalog .carousel__contenedor .carousel__lista .productDouble span {
     margin-left: 14.6%;
   }
   .catalog .carousel__contenedor .carousel__anterior {
@@ -555,10 +566,10 @@ section.gallery img {
   .catalog .carousel__contenedor {
     max-width: 90em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product__image {
+  .catalog .carousel__contenedor .carousel__lista .product__image, .catalog .carousel__contenedor .carousel__lista .productDouble__image {
     width: 20em;
   }
-  .catalog .carousel__contenedor .carousel__lista .product span {
+  .catalog .carousel__contenedor .carousel__lista .product span, .catalog .carousel__contenedor .carousel__lista .productDouble span {
     margin-left: 13.2%;
   }
   .catalog .carousel__contenedor .carousel__anterior, .catalog .carousel__contenedor .carousel__siguiente {
