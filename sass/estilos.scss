@@ -51,13 +51,15 @@ button,span,p,a,marquee{
 }
 
 .notice{
-    display: none;
+    position: sticky;
+    top: 0;
+    display: block;
     width: 100%;
-    padding: .1em 0;
+    padding: .3em 0;
     background-color: #35B82C;
     justify-self: flex-start;
     font-weight: 500;
-    color: $Color-blanco;
+    color: $Color-negro;
     text-align: center;
 }
 
@@ -112,7 +114,7 @@ button,span,p,a,marquee{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2em 0;
+    padding: 0 0 2em;
     background-color: $Color-negro;
     color:$Color-blanco;
     overflow: hidden;
@@ -153,7 +155,7 @@ button,span,p,a,marquee{
                             height: 3em;
                             background-color:  rgba(10, 9, 9,.5);
                             opacity: 0;
-                            transition:.2s ease-out;
+                            transition:.5s ease;
                             a{
                                 color: $Color-blanco;
                                 i{
@@ -164,12 +166,27 @@ button,span,p,a,marquee{
                             }
                         }
                     }
-                    span{
+                    &__name,&__price{
                         display: block;
                         width: fit-content;
                         margin-left: 16%;
                         margin-bottom: .5em;
                         color: $Color-blanco;
+                    }
+                }
+
+                .old{
+                    .productDouble__image,.product__image{
+                        .discount{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background-color: #e9372a;
+                            padding: .3em .5em;
+                            font-size: 1.2em;
+                            font-weight: 500;
+                            transition: .5s ease;
+                        }
                     }
                 }
                 
@@ -182,20 +199,20 @@ button,span,p,a,marquee{
                         display: block;
                         top: 0;
                         right: 0;
-                        width: 8em;
-                        padding: .1em;
+                        padding: .3em .5em;
                         height: auto;
-                        background-color: $Color-blanco;
-                        color: $Color-negro;
+                        background-color: #221f20;
+                        color: $Color-blanco;
                         text-align: center;
-                        font-weight: 400;
+                        font-weight: 500;
+                        font-size: 1.2em;
                         font-family: $fuente2;
                         transition: .5s ease;
-                        opacity: .75;
                         cursor: pointer;
                     }
                     .viewMore:hover{
-                        opacity: 1;
+                        background-color: $Color-blanco;
+                        color: #221f20;
                     }
                     .hide{
                         display: none;
@@ -222,11 +239,13 @@ button,span,p,a,marquee{
                 right: 40px;
 
             }
+            .glider-dots{
+                padding: 0 1em;
+            }
             .glider-dot{
                 height: .5em;
                 border-radius: 0;
-                background-color: #ffffff6e;
-                
+                background-color: #ffffff6e; 
             }
             .glider-dot:hover{
                 background-color: #ffffffad;
@@ -404,8 +423,8 @@ padding: 10px 0px;
                                 height: 10em;
                             }
                         }
-                        span{
-                            margin-left:17%;
+                        &__name,&__price{
+                            margin-left:14.5%;
                         }
                     }
 
@@ -458,6 +477,9 @@ padding: 10px 0px;
                         &__image{
                             width: 20em;
                         }
+                        &__name,&__price{
+                            margin-left:16.5%;
+                        }
                     }
 
                 }
@@ -493,7 +515,7 @@ padding: 10px 0px;
                         &__image{
                             width: 18em;
                         }
-                        span{
+                        &__name,&__price{
                             margin-left:10%;
                         }
                     }
@@ -521,7 +543,7 @@ padding: 10px 0px;
                         &__image{
                             width: 18em;
                         }
-                        span{
+                        &__name,&__price{
                             margin-left:16.5%;
                         }
                     }
@@ -570,7 +592,7 @@ padding: 10px 0px;
                         &__image{
                             width: 20em;
                         }
-                        span{
+                        &__name,&__price{
                             margin-left: 13%;
                         }
                     }
@@ -601,11 +623,11 @@ padding: 10px 0px;
                         &__image{
                             width: 17em;
                         }
-                        span{
+                        &__name,&__price{
                             margin-left: 10%;
                         }
                     }
-                    .left-1,.right-1{
+                    .left-1,.right-1,.left-2,.right-2{
                         opacity: .3;
                     }
                 }
@@ -633,7 +655,7 @@ padding: 10px 0px;
                         &__image{
                             width: 17em;
                         }
-                        span{
+                        &__name,&__price{
                             margin-left: 14.6%;
                         }
                     }
@@ -739,7 +761,7 @@ padding: 10px 0px;
                         &__image{
                             width: 20em;
                         }
-                        span{
+                        &__name,&__price{
                             margin-left: 13.2%;
                         }
                     }

@@ -3,6 +3,8 @@ const productDoubleCarousel= document.querySelectorAll('.productDouble');
 const RECUADROS_VIEW_MORE= document.querySelectorAll('.viewMore');
 const CAROUSEL= document.querySelector('.carousel__lista');
 
+
+
 const turnImage= (e)=>{
     let view_more= e.target;
     let product_double= view_more.parentElement.parentElement;
@@ -10,10 +12,13 @@ const turnImage= (e)=>{
     let first_image= product_double_image.firstElementChild;
     let second_image= product_double_image.childNodes[1];
     let contacto= product_double_image.lastElementChild;
+    let discount= product_double_image.childNodes[3];
 
     product_double_image.classList.toggle('vuelta');
+    product_double_image.childNodes[1].classList.toggle('vuelta');
     view_more.classList.toggle('vuelta');
     contacto.classList.toggle('vuelta');
+    discount.classList.toggle('vuelta');
     first_image.classList.toggle('hide');
     second_image.classList.toggle('hide');
 }
