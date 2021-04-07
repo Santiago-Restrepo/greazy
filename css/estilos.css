@@ -570,6 +570,6 @@ section.gallery img {
 /*Animaciones*/
 @keyframes logo {
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
