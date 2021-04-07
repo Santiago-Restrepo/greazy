@@ -215,9 +215,6 @@ button, span, p, a, marquee {
 .about__greazy-image {
   position: relative;
   display: flex;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   width: 80%;
   max-width: 18em;
   margin: 0 auto;
