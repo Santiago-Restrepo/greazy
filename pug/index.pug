@@ -1,7 +1,7 @@
 mixin producto(imgUrl, nombre, precio, mensaje, descuento)
     .product&attributes(attributes)
         .product__image
-            img(loading="lazy", src=""+imgUrl, alt="")
+            img(loading="lazy", src=""+imgUrl, alt="Greazy "+nombre, name="Greazy "+nombre)
             span.discount #{descuento}
             .contacto
                 a(href="https://www.instagram.com/__greazy__/?hl=es-la" target="_blank" rel="noopener" alt="Enlace a instagram" name="Enlace a instagram")
@@ -16,8 +16,8 @@ mixin producto(imgUrl, nombre, precio, mensaje, descuento)
 mixin productoDoble(imgUrl, nombre, precio, mensaje, imgUrl2, descuento)
     .productDouble&attributes(attributes)
         .productDouble__image
-            img(loading="lazy", src=""+imgUrl, alt="")
-            img(loading="lazy", src=""+imgUrl2, alt="").hide
+            img(loading="lazy", src=""+imgUrl, alt="Greazy "+nombre, name="Greazy "+nombre)
+            img(loading="lazy", src=""+imgUrl2, alt="Greazy "+nombre, name="Greazy espalda "+nombre).hide
             span.viewMore Ver más
             span.discount #{descuento}
             .contacto
@@ -44,14 +44,14 @@ html(lang="es")
         
         header.header
             .header__logo
-                img(loading="lazy", src="images/logo.png", alt="Logo de greazy")
+                img(loading="lazy", src="images/logo.png", alt="Logo de greazy", name="Logo greazy")
         main.hero
                 .hero__container
-                    img(loading="lazy", src="images/logoblanco.png", alt="").greazyRotate
+                    img(loading="lazy", src="images/logoblanco.png", alt="Logo blanco greazy girando", name="Logo blanco greazy girando").greazyRotate
                     a(href="https://api.whatsapp.com/send?phone=573226330880&text=Hola%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20interesa%20conocer%20m%C3%A1s%20de%20ustedes") Contáctanos
         section.catalog
             span.notice Todos los <b>productos con descuento</b> están sujetos a disponibilidad y hasta agotar existencias 
-            img(loading="lazy", src="images/logoblanco.png", alt="loco de greazy girando").greazyRotate
+            img(loading="lazy", src="images/logoblanco.png", alt="loco de greazy girando", name="loco de greazy girando").greazyRotate
             h2 Toca lo que te guste y pídelo
             .carousel
                 .carousel__contenedor
@@ -88,23 +88,23 @@ html(lang="es")
                     .carousel__indicadores(role="tablist" class="dots")
         section.about__greazy
             .about__greazy-image
-                    img(loading="lazy", src="images/DSC01839-ED-AZ.jpg", alt="ANYTIME IS A GOOD TIME") 
-                    img(loading="lazy", src="images/DSC01839-ED-AZ.jpg", alt="ANYTIME IS A GOOD TIME") 
-                    img(loading="lazy", src="images/DSC01839-ED-AZ.jpg", alt="ANYTIME IS A GOOD TIME") 
-                    img(loading="lazy", src="images/DSC01839-ED-AZ.jpg", alt="ANYTIME IS A GOOD TIME") 
+                    img(loading="lazy", src="images/DSC01839-ED-AZ.jpg", alt="Greazy clothing", name="Greazy clothing") 
+                    img(loading="lazy", src="images/DSC01839-ED-AZ.jpg", alt="Greazy clothing", name="Greazy clothing") 
+                    img(loading="lazy", src="images/DSC01839-ED-AZ.jpg", alt="Greazy clothing", name="Greazy clothing") 
+                    img(loading="lazy", src="images/DSC01839-ED-AZ.jpg", alt="Greazy clothing", name="Greazy clothing") 
             .about__greazy-info
                 h2.about__greazy-info__title ANYTIME IS A GOOD TIME
                 p.about__greazy-info__descripton En Greazy rompemos con todo aquello que nos diga cómo y cuándo vestirnos, buscando expresar frescura y crudeza en nuestros diseños y movimientos, demostrando así que cualquiera puede pertenecer a Greazy Gang.
         section.gallery
-            img(loading="lazy", src="images/DSC01874-ED-AZ.jpg", alt="Imagen decorativa")
+            img(loading="lazy", src="images/DSC01874-ED-AZ.jpg", alt="Greazy long crop black")
             img(loading="lazy", src="images/GREAZYLANDINGMEDELLIN1.jpg", alt="Medellín")
-            img(loading="lazy", src="images/DSC02028-ED-AZ.jpg", alt="Imagen decorativa")
+            img(loading="lazy", src="images/DSC02028-ED-AZ.jpg", alt="Greazy hoodie trip")
             img(loading="lazy", src="images/GREAZYLANDINGMEDELLIN2.jpg", alt="Medellín")
-            img(loading="lazy", src="images/DSC01715-ED-AZ.jpg", alt="Imagen decorativa")
+            img(loading="lazy", src="images/DSC01715-ED-AZ.jpg", alt="Greazy store")
             img(loading="lazy", src="images/GREAZYLANDING 4.jpg", alt="Medellín")
-            img(loading="lazy", src="images/DSC08582.jpg", alt="Imagen decorativa")
+            img(loading="lazy", src="images/DSC08582.jpg", alt="Greazy garden of eden")
             img(loading="lazy", src="images/GREAZYLANDING 5.jpg", alt="Medellín")
-            img(loading="lazy", src="images/DSC08519.jpg", alt="Imagen decorativa")
+            img(loading="lazy", src="images/DSC08519.jpg", alt="Greazy crow gang")
 
         section.contact
             .contact__box
