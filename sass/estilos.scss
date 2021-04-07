@@ -266,78 +266,75 @@ button,span,p,a,marquee{
 
 /* Sección 1 - Imágen + Texto */
 
-    .about__greazy {
+.about__greazy {
     width: 100%;
     position: relative;
-    margin: 100px auto 100px auto;
+    margin: 5em 0 3em;
+    &-image {
+        position: relative;
+        display: flex;
+        height: fit-content;
+        width: 80%;
+        max-width: 18em;
+        margin: 0 auto;
+    }
 
+    &-image img {
+        width: 100%;
+        z-index: 4;
+    }
 
-        &-image {
-            display: flex;
-            height: fit-content;
-            position: relative;
-        }
+    &-image img:nth-child(2),&-image img:nth-child(3),&-image img:nth-child(4){
+        position: absolute;
+    }
+
+    &-image img:nth-child(2) {
+        opacity: 0.5;
+        z-index: 3;
+        top: -5%;
+        right: -5%;
+    }
     
-        &-image img {
-            width: 55%;
-            margin: 100px auto 0px auto;
-            object-fit: cover;
+    &-image img:nth-child(3) {
+        opacity: 0.3;
+        z-index: 2;
+        top: -10%;
+        right: -10%;
+
+    }
+
+    &-image img:nth-child(4) {
+        opacity: 0.2;
+        z-index: 1;
+    }
+
+    &-info {
+        box-sizing: border-box;
+        background-color: $Color-negro;
+        color: #fff;
+        width: 90%;
+        max-width: 25em;
+        margin: 1em auto 0;
+        padding: 1em;
+        z-index: 5;
+        
+        &__title {
+            color: $Color-amarillo;
+            font-family: $fuente2;
+            text-align: center;
+            margin-bottom: .5em;
         }
 
-        &-image img:nth-child(1) {
-            z-index: 4;
-            margin-bottom: 10px;
-            margin-top: -20px;
-        }
-
-        &-image img:nth-child(2) {
-            opacity: 0.5;
-            margin-left: -150px;
-            margin-top: 25px;
-            margin-bottom: 20px;
-            z-index: 3;
-        }
-
-        &-image img:nth-child(3) {
-            opacity: 0.3;
-            margin-left: -180px;
-            margin-top: -25px;
-            margin-bottom: 60px;
-            z-index: 2;
-        }
-
-        &-image img:nth-child(4) {
-            opacity: 0.3;
-            margin-left: -180px;
-            margin-top: -60px;
-            margin-bottom: 80px;
-            z-index: 0.1;
-            display: none;
-        }
-
-        &-info {
-            height: fit-content;
-            color: $Color-negro;
-            width: 90%;
-            padding: 20px 0px 0px 0px;
-            margin: 20px auto 0px auto;
-            
-            &__title {
-                color: $Color-rojo;
-                font-family: $fuente2;
-                text-align: center;
-                margin-bottom: 20px;
-                padding: 20px 0px 5px 0px;
-            }
-
-            &__descripton {
-                font-family: $fuente1;
-                text-align: justify;
-                padding: 10px 10px 0px 10px;
-                line-height: 25px;
-            }
+        &__descripton {
+            width: 100%;
+            margin: 0 auto;
+            font-family: $fuente1;
+            text-align: center;
+            line-height: 1.4em;
+            font-weight: 400;
         }
     }
+}
 
 /* Galeria de 9 Fotos */
 section.gallery {
@@ -455,12 +452,22 @@ padding: 10px 0px;
         }
     }
 
-    .about__greazy-image {
-        width: 50%;
-        margin: 0 auto;
-    
-        img:nth-child(4) {
-            display: block;
+    .about__greazy{
+        margin-top: 6em;
+        &-image img:nth-child(2) {
+            top: -10%;
+            right: -10%;
+        }
+        
+        &-image img:nth-child(3) {
+            top: -15%;
+            right: -15%;
+
+        }
+
+        &-image img:nth-child(4) {
+            top: -20%;
+            right: -20%;
         }
     }
 
@@ -643,6 +650,42 @@ padding: 10px 0px;
             }
         }
     }
+    .about__greazy {
+        display: flex;
+        align-items: center;
+        margin: 6em 0 5em;
+
+        &-image{ 
+            max-width: 22em;
+        }
+
+        &-image img:nth-child(2) {
+            top: -5%;
+            right: -10%;
+        }
+        
+        &-image img:nth-child(3) {
+            top: -10%;
+            right: -15%;
+
+        }
+
+        &-image img:nth-child(4) {
+            top: -15%;
+            right: -20%;
+        }
+
+        &-info {
+            position: absolute;
+            bottom: -10%;
+            left: 20%;
+            margin: 0 auto;
+            padding: 1.5em 1em;
+            &__title {
+                margin: 1em 0;
+            }
+        }          
+    }
 
 }
 
@@ -674,81 +717,6 @@ padding: 10px 0px;
         }
     }
 }
-
-@media screen and (min-width: 1200px) {
-
-    .about__greazy {
-        position: relative;
-        width: 70%;
-        height: 100vh;
-        margin: 0px auto;
-        padding-top: 60px;
-        padding-bottom: 30px;
-    
-            &-image{ 
-                margin-top: 100px;
-                margin-bottom: 10px;
-                display: flex;
-                height: fit-content;
-                
-                img {
-                    position: relative;
-                    width: 65%;
-                    margin-left: 35px;
-                }
-            }
-    
-            &-image img:nth-child(1) {
-                z-index: 4;
-            }
-    
-            &-image img:nth-child(2) {
-                opacity: 0.5;
-                margin-left: -150px;
-                margin-top: -50px;
-                margin-bottom: 30px;
-                z-index: 3;
-            }
-    
-            &-image img:nth-child(3) {
-                opacity: 0.3;
-                margin-left: -180px;
-                margin-top: -70px;
-                margin-bottom: 50px;
-                z-index: 2;
-            }
-    
-            &-image img:nth-child(4) {
-                opacity: 0.3;
-                margin-left: -180px;
-                margin-top: -80px;
-                margin-bottom: 80px;
-                z-index: 0.1;
-                display: block;
-            }
-    
-            &-info {
-                position: absolute;
-                bottom: 100px;
-                height: fit-content;
-                background-color: $Color-negro;
-                color: #fff;
-                width: 45%;
-                text-align: left;
-                padding: 20px 10px;
-                z-index: 5;
-                &__title {
-                    color: $Color-Am-Logo;
-                    margin: 20px 0px;
-                }
-            }
-    
-            
-        }
-
-}
-
-
 
 
 @media screen and (min-width: $break-laptop-M){

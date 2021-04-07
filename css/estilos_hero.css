@@ -2,7 +2,6 @@
   height: 87vh;
   background-image: url("../images/DSC01698-ED-AZ.jpg");
   background-size: cover;
-  background-attachment: fixed;
   background-position: 50%;
 }
 .hero .hero__container {
@@ -35,4 +34,10 @@
 }
 .hero .hero__container a:hover {
   background-color: #d3d3d3;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    background-attachment: fixed;
+  }
 }
