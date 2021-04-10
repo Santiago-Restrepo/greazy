@@ -5,6 +5,9 @@ window.addEventListener('load', function(){
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		draggable: true,
+		// scrollLock:true,
+		// scrollLockDelay:100,
+		// resizeLock:false,
 		dots: '.carousel__indicadores',
 		rewind: true,
 		arrows: {
