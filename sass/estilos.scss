@@ -215,6 +215,7 @@ button,span,p,a,marquee{
                             top: 0;
                             left: 0;
                             font-family: $fuente2;
+                            transition: .5s ease;
                         }
                     }
                 }
@@ -274,11 +275,11 @@ button,span,p,a,marquee{
                 background: none;
                 border: none;
                 cursor: pointer;
-
+                transition: .3s ease;
             }
 
             .carousel__siguiente:hover,.carousel__anterior:hover{
-                
+                color: #a8a8a8;
             }
 
             .carousel__anterior{

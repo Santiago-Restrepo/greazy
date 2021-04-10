@@ -179,6 +179,7 @@ button, span, p, a, marquee {
   top: 0;
   left: 0;
   font-family: "Oswald", "sans-serif";
+  transition: 0.5s ease;
 }
 .catalog .carousel__contenedor .carousel__lista .old .productDouble__image .discount, .catalog .carousel__contenedor .carousel__lista .old .product__image .discount {
   position: absolute;
@@ -227,6 +228,10 @@ button, span, p, a, marquee {
   background: none;
   border: none;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+.catalog .carousel__contenedor .carousel__siguiente:hover, .catalog .carousel__contenedor .carousel__anterior:hover {
+  color: #a8a8a8;
 }
 .catalog .carousel__contenedor .carousel__anterior {
   left: 40px;

@@ -13,12 +13,14 @@ const turnImage= (e)=>{
     let second_image= product_double_image.childNodes[1];
     let contacto= product_double_image.lastElementChild;
     let discount= product_double_image.childNodes[3];
+    let newColection= product_double_image.childNodes[4];
 
     product_double_image.classList.toggle('vuelta');
     product_double_image.childNodes[1].classList.toggle('vuelta');
     view_more.classList.toggle('vuelta');
     contacto.classList.toggle('vuelta');
     discount.classList.toggle('vuelta');
+    newColection.classList.toggle('vuelta');
     first_image.classList.toggle('hide');
     second_image.classList.toggle('hide');
 }
