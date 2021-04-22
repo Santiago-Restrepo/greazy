@@ -95,12 +95,6 @@ button, span, p, a, marquee {
   width: 100%;
   max-width: 25em;
 }
-.catalog .carousel__contenedor .carousel__lista {
-  scroll-snap-type: x mandatory;
-}
-.catalog .carousel__contenedor .carousel__lista .product, .catalog .carousel__contenedor .carousel__lista .productDouble {
-  scroll-snap-align: center;
-}
 .catalog .carousel__contenedor .carousel__lista .product__image, .catalog .carousel__contenedor .carousel__lista .productDouble__image {
   position: relative;
   width: 17em;
@@ -209,10 +203,6 @@ button, span, p, a, marquee {
   font-family: "Oswald", "sans-serif";
   transition: 0.5s ease;
   cursor: pointer;
-}
-.catalog .carousel__contenedor .carousel__lista .productDouble .viewMore:hover {
-  background-color: #ffffff;
-  color: #221f20;
 }
 .catalog .carousel__contenedor .carousel__lista .productDouble .hide {
   display: none;
@@ -543,6 +533,10 @@ section.gallery img {
   }
   .catalog .carousel__contenedor .carousel__lista .product__image, .catalog .carousel__contenedor .carousel__lista .productDouble__image {
     width: 17em;
+  }
+  .catalog .carousel__contenedor .carousel__lista .product .viewMore:hover, .catalog .carousel__contenedor .carousel__lista .productDouble .viewMore:hover {
+    background-color: #ffffff;
+    color: #221f20;
   }
   .catalog .carousel__contenedor .carousel__lista .product__name, .catalog .carousel__contenedor .carousel__lista .product__price, .catalog .carousel__contenedor .carousel__lista .productDouble__name, .catalog .carousel__contenedor .carousel__lista .productDouble__price {
     margin-left: 10%;
