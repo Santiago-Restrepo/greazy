@@ -6,7 +6,7 @@ window.addEventListener('load', function(){
 		slidesToScroll: 1,
 		draggable: true,
 		scrollLock:true,
-		scrollLockDelay:150,
+		scrollLockDelay:500,
 		// resizeLock:false,
 		dots: '.carousel__indicadores',
 		rewind: true,
