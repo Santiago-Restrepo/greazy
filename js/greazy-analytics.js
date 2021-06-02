@@ -14,15 +14,29 @@ const writeUserData = (location, date, hour) => {
 }
 
 const fetchIp = async () =>{
-    let ipPromise = await fetch("https://api.ipify.org?format=json");
-    let jsonIp = await ipPromise.json();
-    return jsonIp.ip;
+    try{
+        let ipPromise = await fetch("https://api.ipify.org?format=json");
+        let jsonIp = await ipPromise.json();
+        return jsonIp.ip;
+    }catch(error){
+        console.error(error);
+    }
+    
 }
 
 const fetchLocation = async (ip) =>{
-    let locationPromise = await fetch(`http://api.ipstack.com/${ip}?access_key=14b04d5d1e4902a5f8accb961c66dcac`);
-    let location = await locationPromise.json();
-    return location;
+    try{
+        let locationPromise = await fetch(`http://ipwhois.app/json/${ip}`);
+        // ,{
+        // headers: new Headers({
+        //     'mode':'no-cors'
+        // })});
+        let location = await locationPromise.json();
+        return location;    
+    }catch(error){
+        console.error(error);
+    }
+    
 }
 
 
