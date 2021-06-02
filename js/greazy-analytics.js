@@ -26,7 +26,7 @@ const fetchIp = async () =>{
 
 const fetchLocation = async (ip) =>{
     try{
-        let locationPromise = await fetch(`http://ipwhois.app/json/${ip}`);
+        let locationPromise = await fetch(`https://ipwhois.app/json/${ip}`);
         // ,{
         // headers: new Headers({
         //     'mode':'no-cors'
