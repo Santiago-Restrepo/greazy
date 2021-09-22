@@ -3,11 +3,14 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "public",
+    "public": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "/sass",
+      "/pug",
+      "prepros.config"
     ]
   }
 }
