@@ -3,3 +3,4 @@ prepros.config
 /pug
 .firebaserc
 database.rules
+.firebase
