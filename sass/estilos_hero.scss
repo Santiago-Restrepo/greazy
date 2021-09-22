@@ -39,9 +39,10 @@ $break-laptop: 1024px;
             font-size: 1.3em;
             text-decoration: none;
             font-weight: 600;
+            transition: .3s;
         }
         a:hover{
-            background-color: #d3d3d3;
+            background-color: #cccccc;
         }
     }
     
