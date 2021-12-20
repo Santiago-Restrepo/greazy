@@ -11,7 +11,6 @@ const turnImage= (e)=>{
     let contacto= product_double_image.lastElementChild;
     let discount= product_double_image.childNodes[3];
     let newColection= product_double_image.childNodes[4];
-
     product_double_image.classList.toggle('vuelta');
     product_double_image.childNodes[1].classList.toggle('vuelta');
     view_more.classList.toggle('vuelta');

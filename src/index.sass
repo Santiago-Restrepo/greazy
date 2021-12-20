@@ -137,70 +137,72 @@ button,span,p,a,marquee
                             margin-bottom: .5em
                             color: $Color-blanco
                 .new
-                    .productDouble__image,.product__image
-                        .rainbow-button 
-                            width:calc(11em + 6px)
-                            height:calc(1.2em + 6px)
-                            width: fit-content
-                            padding: .2em
-                            background-image: linear-gradient(90deg, #74698C 0%, #80A7BF 49%, #84C9D9 80%, #74698C 100%)
-                            display:flex
-                            align-items:center
-                            justify-content:center
-                            text-transform:uppercase
-                            font-size:1em
-                            font-weight:500
-                            animation: slidebg 2s linear infinite      
-                        .rainbow-button:after 
-                            content:attr(alt)
-                            padding: .2em
-                            width:11em
-                            height:1.2em
-                            background-color:#221f20
-                            display:flex
-                            align-items:center
-                            justify-content:center  
-                        @keyframes slidebg 
-                            to 
-                            background-position: 11em       
-                        .newCollection
-                            position: absolute
-                            top: 0
-                            left: 0
-                            font-family: $fuente2
-                            transition: .5s ease
+                    .product__container,.productDouble__container
+                        &__image
+                            .rainbow-button 
+                                width:calc(11em + 6px)
+                                height:calc(1.2em + 6px)
+                                width: fit-content
+                                padding: .2em
+                                background-image: linear-gradient(90deg, #74698C 0%, #80A7BF 49%, #84C9D9 80%, #74698C 100%)
+                                display:flex
+                                align-items:center
+                                justify-content:center
+                                text-transform:uppercase
+                                font-size:1em
+                                font-weight:500
+                                animation: slidebg 2s linear infinite      
+                            .rainbow-button:after 
+                                content:attr(alt)
+                                padding: .2em
+                                width:11em
+                                height:1.2em
+                                background-color:#221f20
+                                display:flex
+                                align-items:center
+                                justify-content:center  
+                            @keyframes slidebg 
+                                to 
+                                background-position: 11em       
+                            .newCollection
+                                position: absolute
+                                top: 0
+                                left: 0
+                                font-family: $fuente2
+                                transition: .5s ease
                 .old
-                    .productDouble__image,.product__image
-                        .discount
-                            position: absolute
-                            top: 0
-                            left: 0
-                            background-color: #c32014
-                            padding: .3em .5em
-                            font-size: 1.2em
-                            font-weight: 500
-                            transition: .5s ease
+                    .product__container,.productDouble__container
+                        &__image
+                            .discount
+                                position: absolute
+                                top: 0
+                                left: 0
+                                background-color: #c32014
+                                padding: .3em .5em
+                                font-size: 1.2em
+                                font-weight: 500
+                                transition: .5s ease
                 .productDouble
-                    &__image
-                        position: relative
-                    
-                    .viewMore
-                        position: absolute
-                        display: block
-                        top: 0
-                        right: 0
-                        padding: .3em .5em
-                        height: auto
-                        background-color: #221f20
-                        color: $Color-blanco
-                        text-align: center
-                        font-weight: 500
-                        font-size: 1.2em
-                        font-family: $fuente2
-                        transition: .5s ease
-                        cursor: pointer      
-                    .hide
-                        display: none
+                    &__container
+                        &__image
+                            position: relative
+                            .viewMore
+                                position: absolute
+                                display: block
+                                top: 0
+                                right: 0
+                                padding: .3em .5em
+                                height: auto
+                                background-color: #221f20
+                                color: $Color-blanco
+                                text-align: center
+                                font-weight: 500
+                                font-size: 1.2em
+                                font-family: $fuente2
+                                transition: .5s ease
+                                cursor: pointer      
+                            .hide
+                                display: none
             .carousel__siguiente,.carousel__anterior
                 display: none
                 z-index: 1
