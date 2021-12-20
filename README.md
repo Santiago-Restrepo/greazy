@@ -1,31 +1,31 @@
 # Greazy landing page
 
-Landing page para la marca de ropa streetwear Greazy
+Landing page for streetwear clothing brand Greazy
 
-### Instalación 🔧
+### Installation 🔧
 
-1. `npm install` -> Instalar paquetes con npm
-2. `npm run dev` -> Ejecutar la compilación con Webpack en modo desarollo
+1. `npm install` -> Installing packages with npm
+2. `npm run dev` -> Compiling WebPack in development mode
 
-## Despliegue 📦
+## Deploy 📦
 
-1. `npm run build` -> Ejecutar la compilación con Webpack en modo producción
+1. `npm run build` -> Compiling WebPack in production mode
 
-## Construido con 🛠️
+## Built with 🛠️
 
-* <img src="https://shields.io/badge/Pug-brown?logo=pug&logoColor=white&style=for-the-badge"> - Estructura de la página
-* <img src="https://shields.io/badge/sass-white?logo=sass&style=for-the-badge"> - Estilos de la app
-* <img src="https://shields.io/badge/javascript-black?logo=javascript&style=for-the-badge"> - Lenguaje de programación encargado de la parte dinámica de la página
-* <img src="https://shields.io/badge/webpack-gray?logo=webpack&style=for-the-badge"> - Empaquetador de todos los ficheros de la app
+* <img src="https://shields.io/badge/Pug-brown?logo=pug&logoColor=white&style=for-the-badge"> - Page structure
+* <img src="https://shields.io/badge/sass-white?logo=sass&style=for-the-badge"> - App styles
+* <img src="https://shields.io/badge/javascript-black?logo=javascript&style=for-the-badge"> - Programming language in charge of the dynamic part of the page.
+* <img src="https://shields.io/badge/webpack-gray?logo=webpack&style=for-the-badge"> - Module bundler used
 
-## Versión 📌
+## Version 📌
 
-##### Versión 1.0.0
+##### Version 1.0.0
 
-## Colaboradores ✒️
+## Contributors ✒️
 
-* [Santiago Restrepo](https://github.com/Santiago-Restrepo) - *Desarrollo | diseño | despliegue | Documentación*
-* [Juan Esteban Galvis](https://github.com/JuanesGalvisl) - *Desarrollo | diseño* 
+* [Santiago Restrepo](https://github.com/Santiago-Restrepo) - *Development | Design | Deploy | Documentation*
+* [Juan Esteban Galvis](https://github.com/JuanesGalvisl) - *Development | design* 
 
 ---
-⌨️ con ❤️ por [Santiago Restrepo](https://github.com/santiago-restrepo) 😊
+Made with ❤️ by [Santiago Restrepo](https://github.com/santiago-restrepo) 😊
