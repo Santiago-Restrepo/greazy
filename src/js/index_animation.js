@@ -1,10 +1,7 @@
-const $recuadrosCarousel= document.querySelectorAll('.product__image,.productDouble__image');
+const $recuadrosCarousel= document.querySelectorAll('.product__container__image,.productDouble__container__image');
 const productDoubleCarousel= document.querySelectorAll('.productDouble');
 const RECUADROS_VIEW_MORE= document.querySelectorAll('.viewMore');
 const CAROUSEL= document.querySelector('.carousel__lista');
-
-
-
 const turnImage= (e)=>{
     let view_more= e.target;
     let product_double= view_more.parentElement.parentElement;

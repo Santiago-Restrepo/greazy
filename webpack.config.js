@@ -25,6 +25,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.pug/,
+                use: ["html-loader", "pug-html-loader"]
+            },
+            {
                 test: /\.(js)$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
@@ -34,14 +38,7 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'sass-loader',
-                    {
-                        // Variables
-                        loader: 'sass-resources-loader',
-                        options: {
-                            resources: './src/variables.sass'
-                        }
-                    }
+                    'sass-loader'
                 ]
             },
             {
@@ -63,7 +60,7 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             // dist
-            filename: 'assets/estilos-[name].css'
+            filename: 'assets/style.css'
         }),
         new Dotenv({
             // ruta del archivo .env

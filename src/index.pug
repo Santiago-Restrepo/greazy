@@ -1,36 +1,38 @@
 mixin producto(imgUrl, nombre, precio, mensaje, descuento, nueva)
     .product&attributes(attributes)
-        .product__image
-            img(loading="lazy", src=""+imgUrl, alt="Greazy "+nombre, name="Greazy "+nombre)
-            span.discount #{descuento}
-            span(alt=""+nueva).newCollection.rainbow-button         
-            .contacto
-                a(href="https://www.instagram.com/__greazy__/?hl=es-la" target="_blank" rel="noopener" alt="Enlace a instagram" name="Enlace a instagram")
-                    i.fab.fa-instagram
-                a(href="https://www.facebook.com/Greazy-streetwear-101671948261008" target="_blank" rel="noopener" alt="Enlace a facebook" name="Enlace a facebook")
-                    i.fab.fa-facebook-f
-                a(href=""+mensaje target="_blank" rel="noopener" alt="Enlace a Whatsapp" name="Enlace a Whatsapp")
-                    i.fab.fa-whatsapp           
-        span.product__name #{nombre}
-        span.product__price #{precio}
+        .product__container
+            .product__container__image
+                img(loading="lazy", src=""+imgUrl, alt="Greazy "+nombre, name="Greazy "+nombre)
+                span.discount #{descuento}
+                span(alt=""+nueva).newCollection.rainbow-button
+                .contacto
+                    a(href="https://www.instagram.com/__greazy__/?hl=es-la" target="_blank" rel="noopener" alt="Enlace a instagram" name="Enlace a instagram")
+                        i.fab.fa-instagram
+                    a(href="https://www.facebook.com/Greazy-streetwear-101671948261008" target="_blank" rel="noopener" alt="Enlace a facebook" name="Enlace a facebook")
+                        i.fab.fa-facebook-f
+                    a(href=""+mensaje target="_blank" rel="noopener" alt="Enlace a Whatsapp" name="Enlace a Whatsapp")
+                        i.fab.fa-whatsapp
+            span.product__container__name #{nombre}
+            span.product__container__price #{precio}
 
 mixin productoDoble(imgUrl, nombre, precio, mensaje, imgUrl2, descuento, nueva)
     .productDouble&attributes(attributes)
-        .productDouble__image
-            img(loading="lazy", src=""+imgUrl, alt="Greazy "+nombre, name="Greazy "+nombre)
-            img(loading="lazy", src=""+imgUrl2, alt="Greazy "+nombre, name="Greazy espalda "+nombre).hide
-            span.viewMore Ver más
-            span.discount #{descuento}
-            span(alt=""+nueva).newCollection.rainbow-button
-            .contacto
-                a(href="https://www.instagram.com/__greazy__/?hl=es-la" target="_blank" rel="noopener" alt="Enlace a instagram" name="Enlace a instagram")
-                    i.fab.fa-instagram
-                a(href="https://www.facebook.com/Greazy-streetwear-101671948261008" target="_blank" rel="noopener" alt="Enlace a facebook" name="Enlace a facebook")
-                    i.fab.fa-facebook-f
-                a(href=""+mensaje target="_blank" rel="noopener" alt="Enlace a Whatsapp" name="Enlace a Whatsapp")
-                    i.fab.fa-whatsapp
-        span.productDouble__name #{nombre}
-        span.productDouble__price #{precio}
+        .productDouble__container
+            .productDouble__container__image
+                img(loading="lazy", src=""+imgUrl, alt="Greazy "+nombre, name="Greazy "+nombre)
+                img(loading="lazy", src=""+imgUrl2, alt="Greazy "+nombre, name="Greazy espalda "+nombre).hide
+                span.viewMore Ver más
+                span.discount #{descuento}
+                span(alt=""+nueva).newCollection.rainbow-button
+                .contacto
+                    a(href="https://www.instagram.com/__greazy__/?hl=es-la" target="_blank" rel="noopener" alt="Enlace a instagram" name="Enlace a instagram")
+                        i.fab.fa-instagram
+                    a(href="https://www.facebook.com/Greazy-streetwear-101671948261008" target="_blank" rel="noopener" alt="Enlace a facebook" name="Enlace a facebook")
+                        i.fab.fa-facebook-f
+                    a(href=""+mensaje target="_blank" rel="noopener" alt="Enlace a Whatsapp" name="Enlace a Whatsapp")
+                        i.fab.fa-whatsapp
+            span.productDouble__container__name #{nombre}
+            span.productDouble__container__price #{precio}
 
 <!DOCTYPE html>
 html(lang="es") 
@@ -38,69 +40,68 @@ html(lang="es")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(name="description", content="En Greazy rompemos con todo aquello que nos diga como y cuando vestirnos, buscando expresar frescura y crudeza en nuestros diseños y movimientos, demostrando asi que cualquiera puede pertenecer a Greazy Gang")
-        //- meta(http-equiv="Content-Security-Policy" content="upgrade-insecure-requests")
-        link(rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png")
-        link(rel="stylesheet", href="css/estilos_hero.css")        
-                
-        title Greazy yas
+        //- meta(http-equiv="Content-Security-Policy" content="upgrade-insecure-requests")                
+        title Greazy qué cojones
     body
         
         header.header
             .header__logo
-                img(loading="lazy", src="images/logo.png", alt="Logo de greazy", name="Logo greazy")
+                img(loading="lazy", src="./assets/logo.png", alt="Logo de greazy", name="Logo greazy")
         main.hero
                 .hero__container
-                    img(loading="lazy", src="images/logoblanco.png", alt="Logo blanco greazy girando", name="Logo blanco greazy girando").greazyRotate
+                    .greazyRotate
+                        img(loading="lazy", src="./assets/logoblanco.png", alt="Logo blanco greazy girando", name="Logo blanco greazy girando")
                     a(href="https://api.whatsapp.com/send?phone=573226330880&text=Hola%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20interesaría%20conocer%20m%C3%A1s%20de%20ustedes") Contáctanos
         section.catalog
             span.notice Todos los <b>productos con descuento</b> están sujetos a disponibilidad y hasta agotar existencias 
-            img(loading="lazy", src="images/logoblanco.png", alt="loco de greazy girando", name="loco de greazy girando").greazyRotate
+            .greazyRotate
+                img(loading="lazy", src="./assets/logoblanco.png", alt="loco de greazy girando", name="loco de greazy girando")
             h2 Toca lo que te guste y pídelo
             .carousel
                 .carousel__contenedor
                     button(name="Botón anterior" alt="Botón anterior").carousel__anterior
                         i.fas.fa-arrow-left
                     .carousel__lista
-                        +producto("images/Greazybasicwhite.jpg","GREAZY BASIC W/R", "41.200 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20Greazy%20Basic%20W/R,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")
-                        +productoDoble("images/DSC01890-ED-AZ.jpg","RAINBOW", "65.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20la%20prenda%20Rainbow,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01900-ED-AZ.jpg", "","Nueva colección")(class="new")
-                        +productoDoble("images/DSC01645-ED-AZ.jpg","GREAZY BASIC W/RF", "55.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Greazy%20Basic%20W/RF,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01641-ED-AZ.jpg","","Nueva colección")(class="new")
-                        +productoDoble("images/DSC01576-ED-AZ.jpg","GREAZY BASIC B/T", "55.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20Greazy%20Basic%20B/T,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01683-ED-AZ.jpg", "","Nueva colección")(class="new")
-                        +productoDoble("images/DSC01859-ED-AZ.jpg","LONG CROP WHITE", "50.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Long%20Crop%20White,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01860-ED-AZ.jpg", "","Nueva colección")(class="new")
-                        +producto("images/DSC01871-ED-AZ.jpg","LONG CROP BLACK", "50.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Long%20Crop%20Black,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?", "","Nueva colección")(class="new")
-                        +productoDoble("images/DSC02081-ED-AZ.jpg","GREAZY BODY WHITE", "50.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Greazy%20Body%20White,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC02053-ED-AZ.jpg", "","Nueva colección")(class="new")
-                        +productoDoble("images/DSC02036-ED-AZ.jpg","HOODIE TRIP", "90.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Hoodie%20Trip,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC02001-ED-AZ.jpg", "","Nueva colección")(class="new")
-                        +productoDoble("images/DSC01885-ED-AZ.jpg","MIRROR", "55.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20la%20prenda%20Mirror,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01906-ED-AZ.jpg", "","Nueva colección")(class="new")
-                        +producto("images/cultureO.jpg","CULTURE", "48.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20la%20camisa%20Culture,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")
-                        +producto("images/croptoplifesentence.jpg","CROP LIFE SENTENCE", "33.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20crop%20Life%20Sentence,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")            
-                        +productoDoble("images/Lifesentence.jpg","LIFE SENTENCE", "48.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20camisa%20Life%20Sentence,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?", "images/Lifesentenceespalda.jpg","25%")(class="old")            
-                        +producto("images/Croptopgardenofeden.jpg","CROP GARDEN", "33.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20crop%20Garden,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")            
-                        +producto("images/Gardenofeden.jpg","GARDEN OF EDEN", "48.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20camisa%20Garden%20of%20Eden,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")   
-                        +productoDoble("images/Crowgang.jpg","CROW GANG", "48.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20crow%20Gang,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?", "images/Crowgangespalda.jpg","25%")(class="old")
-                        +producto("images/Greazybasicblack(1).jpg","GREAZY BASIC B/W", "41.200 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20Greazy%20Basic%20B/W,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")            
-                        +producto("images/Greazybasicwhite.jpg","GREAZY BASIC W/R", "41.200 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20Greazy%20Basic%20W/R,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")
-                        +productoDoble("images/DSC01890-ED-AZ.jpg","RAINBOW", "65.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20la%20prenda%20Rainbow,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","images/DSC01900-ED-AZ.jpg")                     
+                        +producto("./assets/Greazybasicwhite.jpg","GREAZY BASIC W/R", "41.200 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20Greazy%20Basic%20W/R,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")
+                        +productoDoble("./assets/DSC01890-ED-AZ.jpg","RAINBOW", "65.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20la%20prenda%20Rainbow,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","./assets/DSC01900-ED-AZ.jpg", "","Nueva colección")(class="new")
+                        +productoDoble("./assets/DSC01645-ED-AZ.jpg","GREAZY BASIC W/RF", "55.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Greazy%20Basic%20W/RF,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","./assets/DSC01641-ED-AZ.jpg","","Nueva colección")(class="new")
+                        +productoDoble("./assets/DSC01576-ED-AZ.jpg","GREAZY BASIC B/T", "55.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20Greazy%20Basic%20B/T,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","./assets/DSC01683-ED-AZ.jpg", "","Nueva colección")(class="new")
+                        +productoDoble("./assets/DSC01859-ED-AZ.jpg","LONG CROP WHITE", "50.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Long%20Crop%20White,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","./assets/DSC01860-ED-AZ.jpg", "","Nueva colección")(class="new")
+                        +producto("./assets/DSC01871-ED-AZ.jpg","LONG CROP BLACK", "50.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Long%20Crop%20Black,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?", "","Nueva colección")(class="new")
+                        +productoDoble("./assets/DSC02081-ED-AZ.jpg","GREAZY BODY WHITE", "50.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Greazy%20Body%20White,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","./assets/DSC02053-ED-AZ.jpg", "","Nueva colección")(class="new")
+                        +productoDoble("./assets/DSC02036-ED-AZ.jpg","HOODIE TRIP", "90.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20el%20Hoodie%20Trip,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","./assets/DSC02001-ED-AZ.jpg", "","Nueva colección")(class="new")
+                        +productoDoble("./assets/DSC01885-ED-AZ.jpg","MIRROR", "55.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20la%20prenda%20Mirror,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","./assets/DSC01906-ED-AZ.jpg", "","Nueva colección")(class="new")
+                        +producto("./assets/cultureO.jpg","CULTURE", "48.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20la%20camisa%20Culture,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")
+                        +producto("./assets/croptoplifesentence.jpg","CROP LIFE SENTENCE", "33.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20crop%20Life%20Sentence,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")            
+                        +productoDoble("./assets/Lifesentence.jpg","LIFE SENTENCE", "48.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20camisa%20Life%20Sentence,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?", "./assets/Lifesentenceespalda.jpg","25%")(class="old")            
+                        +producto("./assets/Croptopgardenofeden.jpg","CROP GARDEN", "33.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20crop%20Garden,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")            
+                        +producto("./assets/Gardenofeden.jpg","GARDEN OF EDEN", "48.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20la%20camisa%20Garden%20of%20Eden,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")   
+                        +productoDoble("./assets/Crowgang.jpg","CROW GANG", "48.800 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20crow%20Gang,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?", "./assets/Crowgangespalda.jpg","25%")(class="old")
+                        +producto("./assets/Greazybasicblack(1).jpg","GREAZY BASIC B/W", "41.200 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20Greazy%20Basic%20B/W,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")            
+                        +producto("./assets/Greazybasicwhite.jpg","GREAZY BASIC W/R", "41.200 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola%20me%20interesa%20el%20Greazy%20Basic%20W/R,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","25%")(class="old")
+                        +productoDoble("./assets/DSC01890-ED-AZ.jpg","RAINBOW", "65.000 COP", "https://api.whatsapp.com/send?phone=573226330880&text=Hola,%20me%20interesa%20la%20prenda%20Rainbow,%20%C2%BFpodr%C3%ADas%20darme%20m%C3%A1s%20informaci%C3%B3n?","./assets/DSC01900-ED-AZ.jpg")                     
                     button(name="Botón siguiente" alt="Botón siguiente").carousel__siguiente
                         i.fas.fa-arrow-right
                     .carousel__indicadores(role="tablist" class="dots")
         section.about__greazy
             .about__greazy-image
-                    img(loading="lazy", src="images/DSC01839-ED-AZ.jpg", alt="Greazy clothing", name="Greazy clothing") 
-                    img(loading="lazy", src="images/DSC01839-ED-AZ.jpg", alt="Greazy clothing", name="Greazy clothing") 
-                    img(loading="lazy", src="images/DSC01839-ED-AZ.jpg", alt="Greazy clothing", name="Greazy clothing") 
-                    img(loading="lazy", src="images/DSC01839-ED-AZ.jpg", alt="Greazy clothing", name="Greazy clothing") 
+                    img(loading="lazy", src="./assets/DSC01839-ED-AZ.jpg", alt="Greazy clothing", name="Greazy clothing") 
+                    img(loading="lazy", src="./assets/DSC01839-ED-AZ.jpg", alt="Greazy clothing", name="Greazy clothing") 
+                    img(loading="lazy", src="./assets/DSC01839-ED-AZ.jpg", alt="Greazy clothing", name="Greazy clothing") 
+                    img(loading="lazy", src="./assets/DSC01839-ED-AZ.jpg", alt="Greazy clothing", name="Greazy clothing") 
             .about__greazy-info
                 h2.about__greazy-info__title ANYTIME IS A GOOD TIME
                 p.about__greazy-info__descripton En Greazy rompemos con todo aquello que nos diga cómo y cuándo vestirnos, buscando expresar frescura y crudeza en nuestros diseños y movimientos, demostrando así que cualquiera puede pertenecer a Greazy Gang.
         section.gallery
-            img(loading="lazy", src="images/DSC01874-ED-AZ.jpg", alt="Greazy long crop black")
-            img(loading="lazy", src="images/GREAZYLANDINGMEDELLIN1.jpg", alt="Medellín")
-            img(loading="lazy", src="images/DSC02028-ED-AZ.jpg", alt="Greazy hoodie trip")
-            img(loading="lazy", src="images/GREAZYLANDINGMEDELLIN2.jpg", alt="Medellín")
-            img(loading="lazy", src="images/DSC01715-ED-AZ.jpg", alt="Greazy store")
-            img(loading="lazy", src="images/GREAZYLANDING-4.jpg", alt="Medellín")
-            img(loading="lazy", src="images/DSC01680-ED-AZ.jpg", alt="Greazy garden of eden")
-            img(loading="lazy", src="images/GREAZYLANDING-5.jpg", alt="Medellín")
-            img(loading="lazy", src="images/DSC02081-ED-AZ.jpg", alt="Greazy crow gang")
+            img(loading="lazy", src="./assets/DSC01874-ED-AZ.jpg", alt="Greazy long crop black")
+            img(loading="lazy", src="./assets/GREAZYLANDINGMEDELLIN1.jpg", alt="Medellín")
+            img(loading="lazy", src="./assets/DSC02028-ED-AZ.jpg", alt="Greazy hoodie trip")
+            img(loading="lazy", src="./assets/GREAZYLANDINGMEDELLIN2.jpg", alt="Medellín")
+            img(loading="lazy", src="./assets/DSC01715-ED-AZ.jpg", alt="Greazy store")
+            img(loading="lazy", src="./assets/GREAZYLANDING-4.jpg", alt="Medellín")
+            img(loading="lazy", src="./assets/DSC01680-ED-AZ.jpg", alt="Greazy garden of eden")
+            img(loading="lazy", src="./assets/GREAZYLANDING-5.jpg", alt="Medellín")
+            img(loading="lazy", src="./assets/DSC02081-ED-AZ.jpg", alt="Greazy crow gang")
 
         section.contact
             .contact__box
@@ -117,13 +118,5 @@ html(lang="es")
         script(async src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js")
         script(async src="js/carousel-mobile.js")
         script(async src="js/index_animation.js")
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        script(src="https://www.gstatic.com/firebasejs/8.6.3/firebase.js")
-        <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
-        script(src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js")
-            
-        script(src="js/greazy-analytics.js") 
-
         link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css")
-        link(rel="stylesheet", href="css/estilos.css")
         link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.1/css/all.css' integrity='sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp' crossorigin='anonymous')
