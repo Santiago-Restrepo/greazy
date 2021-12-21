@@ -28,4 +28,4 @@ Landing page for streetwear clothing brand Greazy
 * [Juan Esteban Galvis](https://github.com/JuanesGalvisl) - *Development | design* 
 
 ---
-Made with ❤️ by [Santiago Restrepo](https://github.com/santiago-restrepo) 😊
+📖 Made with ❤️ by [Santiago Restrepo](https://github.com/santiago-restrepo) 😊
